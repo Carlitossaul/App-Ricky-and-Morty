@@ -1,3 +1,5 @@
+.container {}
+
 .card {
     background-color: #B5D43B;
     border-radius: 13px;
@@ -5,6 +7,8 @@
     box-shadow: 0px 0px 6px #d9ef82;
     border: solid 1px #434738;
     font-size: 1.2em;
+    flex: 1;
+    transition: .3s;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,6 +17,7 @@
 
 .card:hover {
     background-color: #b5d43bd8;
+    flex: 3;
 }
 
 .divButton {
@@ -47,19 +52,26 @@ button:hover {
     font-weight: 900;
     border-radius: 9px;
     color: #434738;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.2em;
 }
 
 .data {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    gap: 25px;
-    color: #434738;
-    font-weight: 400;
+    /* display: flex; */
+    /* justify-content: space-around; */
+    /* flex-direction: row; */
+    /* gap: 25px; */
+    /* color: #434738; */
+    font-weight: 600;
+    color: #24251f;
     font-size: 0.8em;
     padding: 5px;
     margin: 5px;
+}
 
+.ulData {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 3em;
+    flex-wrap: wrap;
 }
