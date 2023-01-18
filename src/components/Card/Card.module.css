@@ -7,17 +7,14 @@
     box-shadow: 0px 0px 6px #d9ef82;
     border: solid 1px #434738;
     font-size: 1.2em;
-    flex: 1;
-    transition: .3s;
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: column; */
 }
 
 .card:hover {
     background-color: #b5d43bd8;
-    flex: 3;
 }
 
 .divButton {
@@ -42,9 +39,14 @@ button:hover {
     color: #f7f7f7;
 }
 
-.img img {
-    height: 12em;
+.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.img img {
+    width: 10em;
 }
 
 .name {
@@ -54,6 +56,8 @@ button:hover {
     color: #434738;
     font-weight: 700;
     font-size: 1.2em;
+    display: flex;
+    justify-content: center;
 }
 
 .data {
@@ -71,7 +75,9 @@ button:hover {
 
 .ulData {
     display: flex;
-    justify-content: space-evenly;
-    gap: 3em;
+    flex-direction: column;
+    margin-left: 1.5em;
+    /* justify-content: space-evenly; */
+    gap: 0.3em;
     flex-wrap: wrap;
 }

@@ -1,11 +1,11 @@
 import style from "./Card.module.css"
 
-export default function Card(props) {
+const Card = (props) => {
    return (
       <div className={style.container}>
          <div className={style.card}>
             <div className={style.divButton}>
-               <button className={style.button} onClick={props.onClose}>X</button>
+               <button className={style.button} onClick={() => props.onClose(props.id)}>X</button>
             </div>
             <h2 className={style.name}>{props.name}</h2>
             <div className={style.img}>
@@ -15,11 +15,11 @@ export default function Card(props) {
                <ul className={style.ulData}>
                   <li>{props.species}</li>
                   <li>{props.gender}</li>
+                  <li>{props.status}</li>
                </ul>
-               {/* <h2>{props.species}</h2>
-               <h2>{props.gender}</h2> */}
             </div>
          </div>
       </div>
    );
 }
+export default Card
