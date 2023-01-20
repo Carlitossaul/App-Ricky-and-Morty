@@ -1,7 +1,7 @@
 
 import Nav from './components/Nav/Nav.jsx'
 import Cards from './components/Cards/Cards.jsx'
-//import style from "./App.module.css"
+import style from "./App.module.css"
 import { useState } from 'react'
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
     setCharacters(characters.filter(pers => pers.id !== id))
   }
 
-  return <div>
+  return <div className={style.App} >
     <Nav onSearch={onSearch} />
     <Cards characters={characters} onClose={onClose} />
   </div>

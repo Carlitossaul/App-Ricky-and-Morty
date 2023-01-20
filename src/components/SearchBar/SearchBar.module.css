@@ -2,9 +2,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 8em;
-    background-color: #434738;
+    height: 6.5em;
+    background-color: #0b296a;
     margin-bottom: 0.2em;
+    margin-right: 4em;
 }
 
 .container {
@@ -12,16 +13,16 @@
     align-items: center;
     justify-content: space-around;
     border-radius: 100px;
-    border: solid 2px #b5d43b;
-    background-color: #434738;
+    border: solid 2px #b78f51;
+    background-color: #0b296a;
     height: 2.8em;
     width: 17em;
 }
 
 .container:hover {
-    background-color: #434738;
-    border: solid 2px #b5d43b;
-    box-shadow: 0px 0px 6px #d9ef82;
+    background-color: #0b296a;
+    border: solid 2px #b78f51;
+    box-shadow: 0px 0px 6px #d2b993;
 }
 
 .button {
@@ -35,14 +36,14 @@
 .img {
     width: 22px;
     height: 22px;
-    background-color: #434738;
+    background-color: #0b296a;
 
 }
 
 .input {
     width: 12em;
     height: 2em;
-    background-color: #434738;
+    background-color: #0b296a;
     outline: none;
     font-size: 0.9em;
     transition: background-color 0.2s, border 0.2s, box-shadow 0.2s;
@@ -51,9 +52,9 @@
 }
 
 .input[type="namber"] {
-    color: #d9ef82
+    color: #7a8eb0
 }
 
 .input::placeholder {
-    color: #b5d43b;
+    color: #7a8eb0;
 }

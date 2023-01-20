@@ -18,11 +18,12 @@
 }
 
 .divButton {
-    margin-left: 85%
+    display: flex;
+    justify-content: flex-end;
 }
 
 .button {
-    margin: 5px 1px;
+    margin: 2px 2px;
     padding: 1px;
     font-size: 0.9em;
     height: 30px;
@@ -46,7 +47,8 @@ button:hover {
 }
 
 .img img {
-    width: 10em;
+    width: 9em;
+    border-radius: 8px;
 }
 
 .name {
