@@ -12,6 +12,7 @@ const Cards = ({ characters, onClose }) => {
          status={person.status}
          image={person.image}
          id={person.id}
+         detailId={person.id}
          onClose={onClose} />)}
    </div>;
 }

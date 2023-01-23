@@ -1,11 +1,11 @@
 .container {}
 
 .card {
-    background-color: #B5D43B;
+    background-color: #F9B626;
     border-radius: 13px;
     margin: 5px;
-    box-shadow: 0px 0px 6px #d9ef82;
-    border: solid 1px #434738;
+    box-shadow: 0px 0px 6px #5b1716df;
+    border: solid 2px #5b1716df;
     font-size: 1.2em;
     /* display: flex;
     align-items: center;
@@ -14,7 +14,9 @@
 }
 
 .card:hover {
-    background-color: #b5d43bd8;
+    background-color: #F9B626;
+    box-shadow: 0px 0px 6px #5b1716df;
+    opacity: 0.9;
 }
 
 .divButton {

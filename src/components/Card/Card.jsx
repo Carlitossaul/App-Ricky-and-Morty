@@ -1,4 +1,5 @@
 import style from "./Card.module.css"
+import { NavLink } from "react-router-dom";
 
 const Card = (props) => {
    return (
@@ -7,7 +8,9 @@ const Card = (props) => {
             <div className={style.divButton}>
                <button className={style.button} onClick={() => props.onClose(props.id)}>X</button>
             </div>
-            <h2 className={style.name}>{props.name}</h2>
+            <NavLink to={`/detail/${props.detailId}`} >
+               <h5 className={style.name}>{props.name}</h5>
+            </NavLink>
             <div className={style.img}>
                <img src={props.image} alt="image" />
             </div>
