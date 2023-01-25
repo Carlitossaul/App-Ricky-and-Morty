@@ -3,9 +3,13 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 7em;
-    margin: 2em;
+    height: 6em;
+    margin: 1.5em 2em 0.5em 2em;
     border-radius: 4.5em;
     box-shadow: 1px 1px 3px #0d23459c;
     /* border: solid 2px #0d2345b2; */
+    border-bottom: 1px solid #DB6800;
+    padding-right: 1rem;
+    padding-left: 0;
+    font-size: 1.3rem;
 }

@@ -1,7 +1,8 @@
 .container {
     display: flex;
     gap: 1rem;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .info {
@@ -9,4 +10,29 @@
     flex-direction: column;
     gap: 2rem;
     color: white;
+}
+
+.image {
+    border: 1px solid #252525;
+    border-radius: 9px;
+}
+
+.button {
+    font-size: 15px;
+    width: 5rem;
+    height: 1.9rem;
+    border-width: 1px;
+    color: #c92200;
+    border-color: #e65f44;
+    font-weight: bold;
+    border-radius: 9px;
+    box-shadow: inset 0px 1px 0px 0px #f9eca0;
+    text-shadow: inset 0px 1px 0px #ded17c;
+    background: linear-gradient(#f0c911, #f2ab1e);
+    cursor: pointer;
+}
+
+.buttonClass:hover {
+    background: linear-gradient(#f2ab1e, #f0c911);
+    cursor: pointer;
 }

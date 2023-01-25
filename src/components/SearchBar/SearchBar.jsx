@@ -13,12 +13,12 @@ const SearchBar = ({ onSearch }) => {
    return (
       <div className={style.searchbar}>
          <div className={style.container}> {/* encerrar lo de abajo en un form */}
-            <input className={style.input} type='namber' placeholder="Search character" value={character} onChange={handleChange} />
-            <button className={style.button} onClick={() => onSearch(character)} >
+            <input className={style.input} type='namber' placeholder="Search character..." value={character} onChange={handleChange} />
+            <button className={style.button} onClick={() => onSearch(character)}>
                <img className={style.img} src={img} alt='lupa' />
             </button>
          </div>
-      </div>
+      </div >
    );
 }
 

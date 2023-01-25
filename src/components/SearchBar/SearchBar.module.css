@@ -1,11 +1,11 @@
 .searchbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 6.5em;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* height: 6.5em; */
     /* background-color: #0b296a; */
-    margin-bottom: 0.2em;
-    margin-right: 4em;
+    /* margin-bottom: 0.2em; */
+    /* margin-right: 4em; */
 
 }
 
@@ -18,6 +18,7 @@
     /* background-color: #0b296a; */
     height: 2.8em;
     width: 17em;
+    font-size: 1.2rem;
 }
 
 .container:hover {
@@ -42,15 +43,26 @@
 }
 
 .input {
-    width: 12em;
-    height: 2em;
+    /* width: 12em; */
+    /* height: 2em; */
     background-color: #DB6800;
     outline: none;
     font-size: 0.9em;
-    transition: background-color 0.2s, border 0.2s, box-shadow 0.2s;
     border: none;
     font-weight: 500;
+    padding: 9px 20px;
 }
+
+.input:hover {
+    background-color: #DB6800;
+    box-shadow: 0px 0px 4px #DB6800;
+}
+
+.input:focus {
+    background-color: #DB6800;
+    box-shadow: 0px 0px 4px #DB6800;
+}
+
 
 .input[type="namber"] {
     color: #b20000
@@ -58,4 +70,5 @@
 
 .input::placeholder {
     color: #b20000;
+    font-size: 1.2rem;
 }
