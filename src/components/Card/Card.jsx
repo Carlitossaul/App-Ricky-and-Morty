@@ -1,25 +1,31 @@
 import style from "./Card.module.css"
 import { NavLink } from "react-router-dom";
+import { Tooltip } from 'react-tooltip'
+// import 'react-tooltip/dist/react-tooltip.css'
 
-const Card = (props) => {
+const Card = ({ onClose, detailId, name, image, species, gender, id }) => {
    return (
       <div className={style.container}>
+
          <div className={style.card}>
             <div className={style.divButton}>
-               <button className={style.button} onClick={() => props.onClose(props.id)}>X</button>
+               <button className={style.button} onClick={() => onClose(id)}>X</button>
             </div>
-            <NavLink to={`/detail/${props.detailId}`} className={style.NavLink} >
-               <h5 className={style.name}>{props.name}</h5>
-               <div className={style.img}>
-                  <img src={props.image} alt="image" />
+            <NavLink id="detalles" data-tooltip-content="Ver detalles del personaje" to={`/detail/${detailId}`} className={style.NavLink} >
+               <div className={style.containerTwo}>
+                  <div className={style.titleDiv}>
+                     <h5 className={style.name}>{name}</h5>
+                  </div>
+                  <img className={style.image} src={image} alt="image" />
                </div>
                <div className={style.data}>
                   <ul className={style.ulData}>
-                     <li>{props.species}</li>
-                     <li>{props.gender}</li>
+                     <li>{species}</li>
+                     <li>{gender}</li>
                   </ul>
                </div>
             </NavLink>
+            <Tooltip place="right" anchorId="detalles" />
          </div>
       </div>
    );

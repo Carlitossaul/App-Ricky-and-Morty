@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import style from "./Detail.module.css"
 
+
 const Detail = () => {
     const { detailId } = useParams();
     const navigate = useNavigate()
@@ -28,12 +29,12 @@ const Detail = () => {
 
         <div className={style.container}>
             <div className={style.info}>
-                <button onClick={() => navigate("/home")} className={style.button} >Home</button>
-                <h1>NOMBRE: {character.name}</h1>
-                <h3>STATUS: {character.status}</h3>
-                <h3>ESPECIE: {character.species}</h3>
-                <h3>GENERO: {character.gender}</h3>
-                <h3>ORIGIN: {character.origin?.name}</h3>
+                <button onClick={() => navigate("/home")} className={style.button} >Go Back!</button>
+                <h1 className={style.text} >NOMBRE: {character.name}</h1>
+                <h3 className={style.text}>STATUS: {character.status}</h3>
+                <h3 className={style.text}>ESPECIE: {character.species}</h3>
+                <h3 className={style.text}>GENERO: {character.gender}</h3>
+                <h3 className={style.text}>ORIGIN: {character.origin?.name}</h3>
             </div>
             <div >
                 <img className={style.image} src={character.image} alt="image" />

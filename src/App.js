@@ -6,19 +6,38 @@ import Detail from "./components/Detail/Detail.jsx"
 import Error404 from "./components/Error404/Error404.jsx"
 import Form from './components/Form/Form.jsx'
 import style from "./App.module.css"
-import { useState } from 'react'
-import { Routes, Route, useLocation } from "react-router-dom"
+import { useState, useEffect } from 'react'
+import { Routes, Route, useLocation, useNavigate } from "react-router-dom"
 
 function App() {
   const [characters, setCharacters] = useState([])
+
+  const navigate = useNavigate();
+  const [access, setAccess] = useState(false);
+  const username = 'carlos@test.com';
+  const password = 'Abcd1234';
+
+  useEffect(() => {
+    !access && navigate('/');
+  }, [access]);
+
+  const login = (userData) => {
+    if (userData.password === password && userData.username === username) {
+      setAccess(true);
+      navigate('/home');
+    }
+  }
+
+  const logout = () => {
+    setAccess(false);
+    navigate("/")
+  }
 
   const onSearch = (character) => {
     fetch(`https://rickandmortyapi.com/api/character/${character}`)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data)
         if (data.name) {
-          console.log(character);
           setCharacters((oldChars) => [...oldChars, data]);
         } else {
           window.alert('No hay personajes con ese ID');
@@ -37,9 +56,9 @@ function App() {
 
   return (
     <div className={style.App} >
-      {location.pathname !== "/" && <Nav onSearch={onSearch} />}
+      {location.pathname !== "/" && <Nav logout={logout} onSearch={onSearch} />}
       <Routes>
-        <Route path='/' element={<Form />} />
+        <Route path='/' element={<Form login={login} />} />
         <Route exact path="/home" element={<Cards characters={characters} onClose={onClose} />} />
         <Route exact path="/about" element={<About />} />
         <Route exact path="/detail/:detailId" element={<Detail />} />

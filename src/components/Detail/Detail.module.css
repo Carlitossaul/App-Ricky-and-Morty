@@ -1,15 +1,18 @@
 .container {
     display: flex;
-    gap: 1rem;
-    justify-content: space-evenly;
+    gap: 6rem;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
 .info {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
     color: white;
+}
+
+.text {
+    text-shadow: 1px 1px 1px #252525;
+    line-height: 3.5rem;
+    font-style: italic;
 }
 
 .image {

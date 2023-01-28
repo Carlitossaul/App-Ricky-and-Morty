@@ -6,18 +6,12 @@
     margin: 5px;
     box-shadow: 0px 0px 6px #5b1716df;
     border: solid 2px #5b1716df;
-    font-size: 1.2em;
-    /* display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; */
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 }
 
 .card:hover {
-    background-color: #fdaf06;
-    box-shadow: 0px 0px 6px #5b1716df;
-    opacity: 0.9;
+    background-color: #fdaf06de;
+    box-shadow: 0px 0px 8px #5b1716df;
 }
 
 .divButton {
@@ -43,46 +37,51 @@ button:hover {
     color: #f7f7f7;
 }
 
-.img {
+
+.containerTwo {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column-reverse;
 }
 
-.img img {
-    width: 9em;
+.titleDiv {
+    width: auto;
+    height: auto;
+    position: absolute;
+    background-color: #242525;
+    opacity: 0.7;
     border-radius: 8px;
+    margin: 0.5rem;
+}
+
+.image {
+    width: 9em;
+    border-top: 2px solid #5b1716df;
+    border-bottom: 2px solid #5b1716df;
 }
 
 .name {
-    padding: 5px 10px 10px 10px;
+    padding: 2px;
+    color: white;
     font-weight: 900;
-    border-radius: 9px;
-    color: #434738;
-    font-weight: 700;
-    font-size: 1.2em;
-    display: flex;
-    justify-content: center;
+    font-size: 1.1rem;
+    margin: 0.5rem;
+    text-shadow: 2px 2px 2px #24251f;
+
 }
 
 .data {
-    /* display: flex; */
-    /* justify-content: space-around; */
-    /* flex-direction: row; */
-    /* gap: 25px; */
-    /* color: #434738; */
     font-weight: 600;
     color: #24251f;
-    font-size: 0.9em;
+    font-size: 0.7em;
     padding: 5px;
     margin: 5px;
+    text-shadow: 1px 1px #24251f;
 }
 
 .ulData {
     display: flex;
     flex-direction: column;
     margin-left: 1.5em;
-    /* justify-content: space-evenly; */
     gap: 0.3em;
     flex-wrap: wrap;
 }

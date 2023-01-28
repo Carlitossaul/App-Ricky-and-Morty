@@ -1,15 +1,59 @@
 .container {
-    background-color: #DB6800;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
+    background-color: #DB6800;
     height: 6em;
     margin: 1.5em 2em 0.5em 2em;
     border-radius: 4.5em;
     box-shadow: 1px 1px 3px #0d23459c;
-    /* border: solid 2px #0d2345b2; */
     border-bottom: 1px solid #DB6800;
     padding-right: 1rem;
-    padding-left: 0;
+    padding-right: 1rem;
     font-size: 1.3rem;
+    flex-wrap: wrap;
+}
+
+
+.linksOne {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 3rem;
+    margin-left: 3.5rem;
+    flex-wrap: wrap;
+}
+
+.NavLink {
+    text-decoration: none;
+    font-weight: bold;
+    color: #572F0B;
+    text-shadow: 1px 1px 1px #252525;
+    font-size: 1.5rem;
+}
+
+.linksTwo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.button {
+    border: 1.5px solid black;
+    border-radius: 100px;
+    width: 3rem;
+    height: 3rem;
+    background-color: #111111a6;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.button:hover {
+    background-color: #ce0920c5;
+    color: black;
+    font-weight: 700;
+    border: none;
 }
