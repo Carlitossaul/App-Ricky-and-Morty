@@ -3,6 +3,7 @@ import Nav from './components/Nav/Nav.jsx'
 import Cards from './components/Cards/Cards.jsx'
 import About from "./components/About/About.jsx"
 import Detail from "./components/Detail/Detail.jsx"
+import Favorites from './components/Favorites/Favorites.jsx'
 import Error404 from "./components/Error404/Error404.jsx"
 import Form from './components/Form/Form.jsx'
 import style from "./App.module.css"
@@ -60,6 +61,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Form login={login} />} />
         <Route exact path="/home" element={<Cards characters={characters} onClose={onClose} />} />
+        <Route exact path="/favorites" element={<Favorites />} />
         <Route exact path="/about" element={<About />} />
         <Route exact path="/detail/:detailId" element={<Detail />} />
         <Route path="*" element={<Error404 />} />

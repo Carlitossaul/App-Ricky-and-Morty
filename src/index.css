@@ -11,6 +11,5 @@ body {
   background-image: url("../src/assets/rick-and-morty-firewatch-wallpaper.jpg");
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
-  background-color: #200003;
   background-attachment: fixed;
 }

@@ -1,5 +1,9 @@
 .App {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2.5rem;
+    /* background-image: url("../src/assets/rick-and-morty-firewatch-wallpaper.jpg");
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
 }

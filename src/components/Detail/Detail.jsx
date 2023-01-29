@@ -26,18 +26,19 @@ const Detail = () => {
     }, [detailId]);
 
     return (
-
-        <div className={style.container}>
-            <div className={style.info}>
-                <button onClick={() => navigate("/home")} className={style.button} >Go Back!</button>
-                <h1 className={style.text} >NOMBRE: {character.name}</h1>
-                <h3 className={style.text}>STATUS: {character.status}</h3>
-                <h3 className={style.text}>ESPECIE: {character.species}</h3>
-                <h3 className={style.text}>GENERO: {character.gender}</h3>
-                <h3 className={style.text}>ORIGIN: {character.origin?.name}</h3>
-            </div>
-            <div >
-                <img className={style.image} src={character.image} alt="image" />
+        <div className={style.detail}>
+            <div className={style.container}>
+                <div className={style.info}>
+                    <button onClick={() => navigate("/home")} className={style.button} >Go Back!</button>
+                    <h1 className={style.text} >NOMBRE: {character.name}</h1>
+                    <h3 className={style.text}>STATUS: {character.status}</h3>
+                    <h3 className={style.text}>ESPECIE: {character.species}</h3>
+                    <h3 className={style.text}>GENERO: {character.gender}</h3>
+                    <h3 className={style.text}>ORIGIN: {character.origin?.name}</h3>
+                </div>
+                <div className={style.divImage}>
+                    <img className={style.image} src={character.image} alt="image" />
+                </div>
             </div>
         </div>
 
