@@ -1,0 +1,35 @@
+.Favorites {}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    border: 1px solid #252525;
+    border-radius: 9px;
+    height: 19rem;
+    position: relative;
+    background-color: rgba(255, 166, 0, 0.658)
+}
+
+.button {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.image {
+    width: 14rem;
+    border-bottom: 1px solid #252525;
+    border-top: 1px solid #252525;
+}
+
+.title {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}

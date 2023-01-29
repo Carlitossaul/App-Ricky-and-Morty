@@ -13,7 +13,8 @@ const Cards = ({ characters, onClose }) => {
          image={person.image}
          id={person.id}
          detailId={person.id}
-         onClose={onClose} />)}
+         onClose={onClose}
+         location={person.location.name} />)}
    </div>;
 }
 export default Cards

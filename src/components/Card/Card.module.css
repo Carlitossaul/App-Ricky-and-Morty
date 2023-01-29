@@ -16,7 +16,7 @@
 
 .divButton {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
 .button {
@@ -36,6 +36,34 @@ button:hover {
     background-color: rgb(231, 15, 15);
     color: #f7f7f7;
 }
+
+.buttonWhite {
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    margin: 0px 1px;
+    padding: 1px;
+}
+
+.buttonWhite:hover {
+    background: none;
+    cursor: pointer;
+    color: red
+}
+
+.buttonRed {
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    margin: 0px 1px;
+    padding: 1px;
+}
+
+.buttonRed:hover {
+    background: none;
+    cursor: pointer;
+}
+
 
 
 .containerTwo {

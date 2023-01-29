@@ -35,6 +35,7 @@ const Detail = () => {
                     <h3 className={style.text}>ESPECIE: {character.species}</h3>
                     <h3 className={style.text}>GENERO: {character.gender}</h3>
                     <h3 className={style.text}>ORIGIN: {character.origin?.name}</h3>
+                    <h3 className={style.text}>LOCATION: {character.location?.name}</h3>
                 </div>
                 <div className={style.divImage}>
                     <img className={style.image} src={character.image} alt="image" />

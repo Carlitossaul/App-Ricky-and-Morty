@@ -5,8 +5,8 @@ import { connect } from 'react-redux';
 import { useState, useEffect } from "react";
 import { addFavorite, deleteFavorite } from "../../Redux/actions/index.js"
 
-const Card = (props, { id, detailId }) => {
-   console.log(props)
+const Card = (props) => {
+
    const [isFav, setIsfav] = useState(false)
 
    useEffect(() => {
@@ -32,11 +32,12 @@ const Card = (props, { id, detailId }) => {
       <div className={style.container}>
          <div className={style.card}>
             <div className={style.divButton}>
-               {isFav ? (<button onClick={handleFavorite}>❤️</button>) : (
-                  <button onClick={handleFavorite}>🤍</button>)}
+               {isFav ? (<button className={style.buttonRed} onClick={handleFavorite}>❤️</button>) : (
+                  <button id="favorites" data-tooltip-content="Add to favorites" className={style.buttonWhite} onClick={handleFavorite}>🤍</button>)}
+               <Tooltip place="bottom" anchorId="favorites" />
                <button className={style.button} onClick={() => props.onClose(props.id)}>X</button>
             </div>
-            <NavLink id="detalles" data-tooltip-content="Ver detalles del personaje" to={`/detail/${detailId}`} className={style.NavLink} >
+            <NavLink id="detalles" data-tooltip-content="Ver detalles del personaje" to={`/detail/${props.detailId}`} className={style.NavLink} >
                <div className={style.containerTwo}>
                   <div className={style.titleDiv}>
                      <h5 className={style.name}>{props.name}</h5>
