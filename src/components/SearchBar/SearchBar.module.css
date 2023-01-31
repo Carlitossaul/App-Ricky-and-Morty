@@ -1,13 +1,4 @@
-.searchbar {
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* height: 6.5em; */
-    /* background-color: #0b296a; */
-    /* margin-bottom: 0.2em; */
-    /* margin-right: 4em; */
-
-}
+.searchbar {}
 
 .container {
     display: flex;
@@ -72,4 +63,36 @@
 .input::placeholder {
     color: #663302;
     font-size: 1.1rem;
+}
+
+@media (max-width:391px) {
+    .searchbar {
+        display: flex;
+        justify-content: center;
+    }
+
+    .container {
+        font-size: 0.9rem;
+        display: flex;
+        justify-content: center;
+        margin-left: 1.1rem;
+    }
+
+    .input {
+        font-size: 0.4rem;
+        padding: 3px;
+    }
+
+    .input[type="namber"] {
+        color: #663302;
+        font-size: 1rem;
+    }
+
+    .input::placeholder {
+        color: #663302;
+        font-size: 1rem;
+    }
+
+
+
 }

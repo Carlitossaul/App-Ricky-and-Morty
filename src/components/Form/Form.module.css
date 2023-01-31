@@ -109,3 +109,19 @@
     width: 100vw;
     /* z-index: -1; */
 }
+
+@media (max-width:391px) {
+    .form {
+        width: 90%;
+        height: 60%;
+    }
+
+    .container {
+        background: none;
+    }
+
+    .video {
+        display: none;
+    }
+
+}
