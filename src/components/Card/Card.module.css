@@ -85,6 +85,7 @@ button:hover {
     width: 9em;
     border-top: 1px solid #5b1716df;
     border-bottom: 1px solid #5b1716df;
+    margin: auto;
 }
 
 .name {

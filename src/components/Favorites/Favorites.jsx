@@ -15,11 +15,11 @@ const Favorites = ({ myFavorites }) => {
     return (
         <div className={style.Favorites} >
             <div>
-                <select onChange={handeleOrder}>
+                <select className={style.select} onChange={handeleOrder}>
                     <option value="Ascendente">Ascendente</option>
                     <option value="Descendente">Descendente</option>
                 </select>
-                <select onChange={e => dispatch(filterCards(e.target.value))}>
+                <select className={style.select} onChange={e => dispatch(filterCards(e.target.value))}>
                     <option value="Male" >Male</option>
                     <option value="Female" >Female</option>
                     <option value="Genderless" >Genderless</option>

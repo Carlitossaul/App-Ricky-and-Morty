@@ -1,4 +1,10 @@
-.Favorites {}
+.Favorites {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
 
 .container {
     display: flex;
@@ -32,4 +38,24 @@
     display: flex;
     justify-content: center;
     margin: 1rem;
+}
+
+.select {
+    margin: 0.5rem;
+    background-color: darkorange;
+    padding: 10px;
+    /* border: 1px solid black; */
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+
+.select:hover {
+    background-color: rgba(241, 136, 7, 0.911);
+}
+
+.select option {
+    color: brown;
 }

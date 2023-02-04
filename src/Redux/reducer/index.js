@@ -4,6 +4,13 @@ const initialState = {
     myFavorites: [],
     allCharacters: [],
 }
+// switch (action.type) {
+//     case 'GET_COUNTRIES':
+//         //console.log(state.countries);
+//         return {
+//             ...state,
+//             countries: action.payload
+//         }
 
 const rootReducer = (state = initialState, { type, payload }) => {
     switch (type) {

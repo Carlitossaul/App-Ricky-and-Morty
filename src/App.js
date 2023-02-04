@@ -9,6 +9,8 @@ import Form from './components/Form/Form.jsx'
 import style from "./App.module.css"
 import { useState, useEffect } from 'react'
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom"
+import { useDispatch } from 'react-redux';
+import { deleteFavorite } from './Redux/actions/index.js'
 
 function App() {
   const [characters, setCharacters] = useState([])
@@ -35,9 +37,10 @@ function App() {
   }
 
   const onSearch = (character) => {
-    if (characters.find((char) => char.detailID === character)) {
-      alert("Ya tienes ese personaje")
-    } else {
+
+    let search = characters.filter((per) => per.id == character)
+    if (search.length === 0) {
+
       fetch(`https://rickandmortyapi.com/api/character/${character}`)
         .then((response) => response.json())
         .then((data) => {
@@ -48,11 +51,15 @@ function App() {
           }
         });
     }
+    else {
+      alert("ya tienes este personaje")
+    }
   }
 
-
+  const dispatch = useDispatch();
   const onClose = (id) => {
     setCharacters(characters.filter(pers => pers.id !== id))
+    dispatch(deleteFavorite(id))
   }
 
   const location = useLocation()
