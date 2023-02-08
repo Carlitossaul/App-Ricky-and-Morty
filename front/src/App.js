@@ -11,7 +11,7 @@ import { useState, useEffect } from 'react'
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom"
 import { useDispatch } from 'react-redux';
 import { deleteFavorite } from './Redux/actions/index.js'
-
+//
 function App() {
   const [characters, setCharacters] = useState([])
 
