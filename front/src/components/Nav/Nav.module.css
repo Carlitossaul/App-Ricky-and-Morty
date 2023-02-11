@@ -74,6 +74,13 @@
 
 }
 
+@media (max-width:1205px) {
+    .container {
+        display: flex;
+        /* flex-direction: row; */
+    }
+}
+
 @media (max-width:391px) {
     .container {
         display: flex;

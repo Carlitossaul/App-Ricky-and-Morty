@@ -40,8 +40,8 @@ function App() {
 
     let search = characters.filter((per) => per.id == character)
     if (search.length === 0) {
-      // https://rickandmortyapi.com/api/character
-      fetch(`http://localhost:3001/rickandmorty/character/${character}`)
+      // http://localhost:3001/rickandmorty/character
+      fetch(`http://localhost:3000/rickandmorty/onsearch/${character}`)
         .then((response) => response.json())
         .then((data) => {
           if (data.name) {
