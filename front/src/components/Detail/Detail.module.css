@@ -1,62 +1,76 @@
 .detail {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
 }
 
 .container {
-    border-radius: 7px;
-    margin: 0.5rem;
-    padding: 15px;
-    display: flex;
-    gap: 6rem;
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color: rgba(255, 166, 0, 0.329);
-    /* opacity: 0.9; */
-    align-items: center;
-    border: 1px solid #252525;
+  border-radius: 7px;
+  margin: 0.5rem;
+  padding: 15px;
+  display: flex;
+  gap: 6rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: rgba(255, 166, 0, 0.329);
+  /* opacity: 0.9; */
+  align-items: center;
+  border: 1px solid #252525;
 }
 
 .info {
-    color: black;
+  color: black;
 }
 
 .text {
-    text-shadow: 1px 1px 1px #252525;
-    line-height: 3.5rem;
-    font-style: italic;
+  text-shadow: 1px 1px 1px #252525;
+  line-height: 3.5rem;
+  font-style: italic;
 }
 
 .divImage {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .image {
-    width: 15rem;
-    border: 1px solid #252525;
-    border-radius: 9px;
+  width: 15rem;
+  border: 1px solid #252525;
+  border-radius: 9px;
 }
 
 .button {
-    font-size: 15px;
-    width: 5rem;
-    height: 1.9rem;
-    border-width: 1px;
-    color: #c92200;
-    border-color: #e65f44;
-    font-weight: bold;
-    border-radius: 9px;
-    box-shadow: inset 0px 1px 0px 0px #f9eca0;
-    text-shadow: inset 0px 1px 0px #ded17c;
-    background: linear-gradient(#f0c911, #f2ab1e);
-    cursor: pointer;
+  font-size: 15px;
+  width: 5rem;
+  height: 1.9rem;
+  border-width: 1px;
+  color: #c92200;
+  border-color: #e65f44;
+  font-weight: bold;
+  border-radius: 9px;
+  box-shadow: inset 0px 1px 0px 0px #f9eca0;
+  text-shadow: inset 0px 1px 0px #ded17c;
+  background: linear-gradient(#f0c911, #f2ab1e);
+  cursor: pointer;
 }
 
 .buttonClass:hover {
-    background: linear-gradient(#f2ab1e, #f0c911);
-    cursor: pointer;
+  background: linear-gradient(#f2ab1e, #f0c911);
+  cursor: pointer;
+}
+
+@media (max-width: 391px) {
+}
+@media (min-width: 391px) and (max-width: 768px) {
+  /* Estilos para pantallas con ancho máximo de 768px */
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  /* Estilos para pantallas con ancho entre 768px y 992px */
+}
+
+@media (min-width: 992px) {
+  /* Estilos para pantallas con ancho mínimo de 992px */
 }

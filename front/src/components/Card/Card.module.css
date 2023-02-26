@@ -1,121 +1,132 @@
-.container {}
+.container {
+}
 
 .card {
-    background-color: #ffb006;
-    border-radius: 9px;
-    margin: 5px;
-    box-shadow: 0px 0px 6px #252525c5;
-    border: solid 1px #5b1716df;
-    font-size: 1.7rem;
+  background-color: #ffb006;
+  border-radius: 9px;
+  margin: 5px;
+  box-shadow: 0px 0px 6px #252525c5;
+  border: solid 1px #5b1716df;
+  font-size: 1.7rem;
 }
 
 .card:hover {
-    background-color: #f9b626;
-    box-shadow: 0px 0px 8px #252525;
+  background-color: #f9b626;
+  box-shadow: 0px 0px 8px #252525;
 }
 
 .divButton {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .button {
-    margin: 2px 2px;
-    padding: 1px;
-    font-size: 0.9em;
-    height: 30px;
-    width: 30px;
-    border: none;
-    background: none;
-    cursor: pointer;
-    border-radius: 8px;
-    font-weight: 500;
+  margin: 2px 2px;
+  padding: 1px;
+  font-size: 0.9em;
+  height: 30px;
+  width: 30px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: 500;
 }
 
 button:hover {
-    background-color: rgb(231, 15, 15);
-    color: #f7f7f7;
+  background-color: rgb(231, 15, 15);
+  color: #f7f7f7;
 }
 
 .buttonWhite {
-    background: none;
-    border: none;
-    font-size: 1.4rem;
-    margin: 0px 1px;
-    padding: 1px;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  margin: 0px 1px;
+  padding: 1px;
 }
 
 .buttonWhite:hover {
-    background: none;
-    cursor: pointer;
-    color: red
+  background: none;
+  cursor: pointer;
+  color: red;
 }
 
 .buttonRed {
-    background: none;
-    border: none;
-    font-size: 1.4rem;
-    margin: 0px 1px;
-    padding: 1px;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  margin: 0px 1px;
+  padding: 1px;
 }
 
 .buttonRed:hover {
-    background: none;
-    cursor: pointer;
+  background: none;
+  cursor: pointer;
 }
 
-
-
 .containerTwo {
-    display: flex;
-    flex-direction: column-reverse;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .titleDiv {
-    width: auto;
-    height: auto;
-    position: absolute;
-    background-color: #242525;
-    opacity: 0.7;
-    border-radius: 8px;
-    margin: 0.5rem;
+  width: auto;
+  height: auto;
+  position: absolute;
+  background-color: #242525;
+  opacity: 0.7;
+  border-radius: 8px;
+  margin: 0.5rem;
 }
 
 .image {
-    width: 9em;
-    border-top: 1px solid #5b1716df;
-    border-bottom: 1px solid #5b1716df;
-    margin: auto;
+  width: 9em;
+  border-top: 1px solid #5b1716df;
+  border-bottom: 1px solid #5b1716df;
+  margin: auto;
 }
 
 .name {
-    padding: 2px;
-    color: white;
-    font-weight: 900;
-    font-size: 1.1rem;
-    margin: 0.5rem;
-    text-shadow: 2px 2px 2px #24251f;
-
+  padding: 2px;
+  color: white;
+  font-weight: 900;
+  font-size: 1.1rem;
+  margin: 0.5rem;
+  text-shadow: 2px 2px 2px #24251f;
 }
 
 .data {
-    font-weight: 600;
-    color: #24251f;
-    font-size: 0.7em;
-    padding: 5px;
-    margin: 5px;
-    text-shadow: 1px 1px #24251f;
+  font-weight: 600;
+  color: #24251f;
+  font-size: 0.7em;
+  padding: 5px;
+  margin: 5px;
+  text-shadow: 1px 1px #24251f;
 }
 
 .ulData {
-    display: flex;
-    flex-direction: column;
-    margin-left: 1.5em;
-    gap: 0.3em;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.5em;
+  gap: 0.3em;
+  flex-wrap: wrap;
 }
 
-
 .NavLink {
-    text-decoration: none;
+  text-decoration: none;
+}
+
+@media (max-width: 391px) {
+}
+@media (min-width: 391px) and (max-width: 768px) {
+  /* Estilos para pantallas con ancho máximo de 768px */
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  /* Estilos para pantallas con ancho entre 768px y 992px */
+}
+
+@media (min-width: 992px) {
+  /* Estilos para pantallas con ancho mínimo de 992px */
 }

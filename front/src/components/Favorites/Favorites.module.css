@@ -1,61 +1,75 @@
 .Favorites {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    gap: 3rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .card {
-    border: 1px solid #252525;
-    border-radius: 9px;
-    height: 19rem;
-    position: relative;
-    background-color: rgba(255, 166, 0, 0.658)
+  border: 1px solid #252525;
+  border-radius: 9px;
+  height: 19rem;
+  position: relative;
+  background-color: rgba(255, 166, 0, 0.658);
 }
 
 .button {
-    position: absolute;
-    top: 0;
-    right: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .image {
-    width: 14rem;
-    border-bottom: 1px solid #252525;
-    border-top: 1px solid #252525;
+  width: 14rem;
+  border-bottom: 1px solid #252525;
+  border-top: 1px solid #252525;
 }
 
 .title {
-    font-size: 1.5rem;
-    display: flex;
-    justify-content: center;
-    margin: 1rem;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
 }
 
 .select {
-    margin: 0.5rem;
-    background-color: darkorange;
-    padding: 10px;
-    /* border: 1px solid black; */
-    border: none;
-    border-radius: 10px;
-    font-size: 14px;
-    outline: none;
-    cursor: pointer;
+  margin: 0.5rem;
+  background-color: darkorange;
+  padding: 10px;
+  /* border: 1px solid black; */
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
 }
 
 .select:hover {
-    background-color: rgba(241, 136, 7, 0.911);
+  background-color: rgba(241, 136, 7, 0.911);
 }
 
 .select option {
-    color: brown;
+  color: brown;
+}
+
+@media (max-width: 391px) {
+}
+@media (min-width: 391px) and (max-width: 768px) {
+  /* Estilos para pantallas con ancho máximo de 768px */
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  /* Estilos para pantallas con ancho entre 768px y 992px */
+}
+
+@media (min-width: 992px) {
+  /* Estilos para pantallas con ancho mínimo de 992px */
 }

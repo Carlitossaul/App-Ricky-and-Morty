@@ -1,25 +1,39 @@
 .container {
-    background-color: #FFAF1C;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100vw;
-    height: 100vh;
+  background-color: #ffaf1c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100vw;
+  height: 100vh;
 }
 
 .title {
-    color: black;
-    font-size: 4rem;
+  color: black;
+  font-size: 4rem;
 }
 
 .subtitle {
-    color: black;
-    font-size: 2rem;
+  color: black;
+  font-size: 2rem;
 }
 
 .number {
-    color: white;
-    font-weight: 900;
-    font-size: 4rem;
+  color: white;
+  font-weight: 900;
+  font-size: 4rem;
+}
+
+@media (max-width: 391px) {
+}
+@media (min-width: 391px) and (max-width: 768px) {
+  /* Estilos para pantallas con ancho máximo de 768px */
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  /* Estilos para pantallas con ancho entre 768px y 992px */
+}
+
+@media (min-width: 992px) {
+  /* Estilos para pantallas con ancho mínimo de 992px */
 }
