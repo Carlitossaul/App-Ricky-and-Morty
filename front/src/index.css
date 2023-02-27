@@ -5,9 +5,15 @@
   padding: 0;
 }
 
+/**
+Verde: #00FFAA;
+Amarillo: #F9D71C;
+Rosa: #FF2B6D;
+*/
+
 body {
   margin: auto;
-  font-family: "Source Code Pro", monospace;
+  font-family: Arial;
   background-image: url("../src/assets/bd5b474cdd2b619a9654825b85608c5b74e93071.gif");
   background-size: 100vw 100vh;
   background-repeat: no-repeat;

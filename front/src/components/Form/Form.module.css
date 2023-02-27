@@ -17,7 +17,7 @@
   width: 30rem;
   border-radius: 9px;
   border: 1px solid rgba(221, 221, 221, 0.87);
-  opacity: 0.9;
+  opacity: 0.98;
 }
 
 .username {
@@ -44,7 +44,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #db6800;
+  background-color: #f9d71c;
   color: white;
   text-align: center;
   padding: 10px;
@@ -56,8 +56,8 @@
 }
 
 .login:hover {
-  opacity: 0.95;
-  background-color: #db6600e8;
+  /* opacity: 0.95; */
+  background-color: #f9d81cc7;
 }
 
 .label {
