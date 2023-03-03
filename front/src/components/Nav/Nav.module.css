@@ -12,7 +12,7 @@
   border-bottom: 1px solid #f9d81ca1;
   font-size: 1.3rem;
   flex-wrap: wrap;
-  opacity: 0.9;
+  opacity: 0.8;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
     -23px 0 20px -23px rgba(0, 0, 0, 0.8), 23px 0 20px -23px rgba(0, 0, 0, 0.8),
     inset 0 0 40px rgba(0, 0, 0, 0.1), 0 3px 8px rgba(255, 215, 0, 0.6);
@@ -25,13 +25,14 @@
 }
 
 .NavLink {
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
   margin: 2rem;
   text-decoration: none;
   font-weight: bold;
   color: #252525;
   text-shadow: 1px 1px 3px #00ffaa;
   font-size: 1.7rem;
+  transition: all 0.4s;
 }
 
 .NavLink:hover {
@@ -53,16 +54,15 @@
 }
 
 .button {
-  background-color: #aed581;
-  color: #333;
+  background-color: rgba(0, 255, 170, 0.3);
+  color: #252;
   border: none;
-  border-radius: 25px;
-  padding: 10px 20px;
-  font-size: 1rem;
+  border-radius: 9px;
+  padding: 10px 15px;
+  font-size: 0.9rem;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4), inset 0 0 0 3px #aed581;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
@@ -70,7 +70,7 @@
 .button:hover {
   background-color: #aed581;
   color: #333;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6), inset 0 0 0 3px #aed581;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6), inset 0 0 0 3px #aed581;
   transform: translateY(-2px);
 }
 

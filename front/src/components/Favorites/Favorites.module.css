@@ -14,21 +14,41 @@
 }
 
 .card {
-  border: 1px solid #252525;
   border-radius: 9px;
   height: 19rem;
   position: relative;
-  background-color: rgba(255, 166, 0, 0.658);
+  background-color: rgba(0, 255, 170, 0.5);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.botones {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+.button {
+  background-color: rgba(0, 255, 170, 0.6);
+  color: #333;
+  border: none;
+  border-radius: 9px;
+  padding: 10px 13px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
 }
 
-.button {
-  position: absolute;
-  top: 0;
-  right: 0;
+.button:hover {
+  background-color: rgba(0, 255, 170, 0.8);
+  color: #333;
+  border: none;
 }
 
 .image {
-  width: 14rem;
+  width: 13.5em;
   border-bottom: 1px solid #252525;
   border-top: 1px solid #252525;
 }
@@ -38,11 +58,12 @@
   display: flex;
   justify-content: center;
   margin: 1rem;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .select {
   margin: 0.5rem;
-  background-color: darkorange;
+  background-color: rgba(0, 194, 255, 0.7);
   padding: 10px;
   /* border: 1px solid black; */
   border: none;
@@ -53,11 +74,11 @@
 }
 
 .select:hover {
-  background-color: rgba(241, 136, 7, 0.911);
+  background-color: rgba(0, 194, 255, 0.8);
 }
 
 .select option {
-  color: brown;
+  color: #252525;
 }
 
 @media (max-width: 391px) {

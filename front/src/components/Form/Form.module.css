@@ -18,6 +18,7 @@
   border-radius: 9px;
   border: 1px solid rgba(221, 221, 221, 0.87);
   opacity: 0.98;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .username {
@@ -44,7 +45,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f9d71c;
+  background-color: rgba(0, 194, 255, 0.7);
   color: white;
   text-align: center;
   padding: 10px;
@@ -53,15 +54,20 @@
   font-size: 14pt;
   font-weight: 500;
   cursor: pointer;
+  letter-spacing: 1px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
 }
 
 .login:hover {
-  /* opacity: 0.95; */
-  background-color: #f9d81cc7;
+  background-color: rgba(0, 194, 255, 0.8);
+  color: #333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 6px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
 }
 
 .label {
-  font-weight: 900;
+  font-weight: 500;
   font-size: 20px;
 }
 

@@ -13,7 +13,7 @@
   gap: 6rem;
   justify-content: center;
   flex-wrap: wrap;
-  background-color: rgba(255, 166, 0, 0.329);
+  background-color: rgba(0, 255, 170, 0.5);
   /* opacity: 0.9; */
   align-items: center;
   border: 1px solid #252525;
@@ -42,23 +42,23 @@
 }
 
 .button {
-  font-size: 15px;
-  width: 5rem;
-  height: 1.9rem;
-  border-width: 1px;
-  color: #c92200;
-  border-color: #e65f44;
-  font-weight: bold;
+  background-color: rgba(0, 255, 170, 0.3);
+  color: #333;
+  border: none;
   border-radius: 9px;
-  box-shadow: inset 0px 1px 0px 0px #f9eca0;
-  text-shadow: inset 0px 1px 0px #ded17c;
-  background: linear-gradient(#f0c911, #f2ab1e);
+  padding: 10px 13px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.4s ease-in-out;
   cursor: pointer;
 }
 
-.buttonClass:hover {
-  background: linear-gradient(#f2ab1e, #f0c911);
-  cursor: pointer;
+.button:hover {
+  background-color: rgba(0, 255, 170, 0.5);
+  color: #333;
+  border: none;
 }
 
 @media (max-width: 391px) {

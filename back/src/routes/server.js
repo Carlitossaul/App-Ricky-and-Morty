@@ -4,10 +4,9 @@ const getCharDetail = require("../controllers/getCharDetail");
 
 http
   .createServer((req, res) => {
-    res.setHeader("Access-Control-Allow-Origin", "*"); //esta linea permitira conectar tu front con el servidor sin que haya probemas de cors
+    res.setHeader("Access-Control-Allow-Origin", "*"); //esta linea permitira conectar tu front con el servidor sin que haya probemas de cors. con esto restringimos el acceso. y cin el asterisco decimos que es universal.
 
     let id = req.url.split("/").at(-1); //.at(-1)
-    console.log(id);
     if (req.url.includes("onsearch")) {
       getCharById(res, id);
     }

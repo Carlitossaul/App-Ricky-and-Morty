@@ -3,8 +3,7 @@ const axios = require("axios"); //esta forma de importar commonjs
 const getCharById = (res, id) => {
   axios
     .get(`https://rickandmortyapi.com/api/character/${id}`) //llamado de un personaje en especifico
-    .then((response) => response.data) //lo que me esta retornando la api
-    .then((data) => {
+    .then(({ data }) => {
       let character = {
         id: data.id,
         name: data.name,
@@ -24,3 +23,5 @@ const getCharById = (res, id) => {
 };
 
 module.exports = getCharById;
+
+//export delante de la variable es sin s
