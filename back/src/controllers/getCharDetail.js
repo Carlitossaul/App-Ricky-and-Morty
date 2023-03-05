@@ -1,5 +1,7 @@
 const axios = require("axios"); //esta forma de importar commonjs
 
+const URL = "https://rickandmortyapi.com/api/character/";
+
 const getCharDetail = (res, id) => {
   axios(`https://rickandmortyapi.com/api/character/${id}`) //llamado de un personaje en especifico
     .then((response) => response.data) //lo que me esta retornando la api
@@ -25,3 +27,21 @@ const getCharDetail = (res, id) => {
 };
 
 module.exports = getCharDetail;
+
+// const getCharDetail = (req,res ) =>{
+//     const params = req.params
+
+//     axios.get(URL+params)
+//     .then((response) => {
+//         const {id, name, species, image, gender, origin} = response.data
+//         const character = {
+//             id: id, name: name, image:image, gender:gender, species:species, origin: origin.name,
+//         }
+//         if(id&&name&&image&&gender&&species){
+//             res.status(200).json(character)
+//         } else {
+//             res.status(500).json(error.message)
+//         }
+//     })
+
+// }
