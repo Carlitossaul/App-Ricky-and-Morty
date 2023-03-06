@@ -10,15 +10,13 @@ const rootReducer = (state = initialState, { type, payload }) => {
     case ADD_FAVORITE:
       return {
         ...state,
-        myFavorites: [...state.allCharacters, payload],
-        allCharacters: [...state.allCharacters, payload],
+        myFavorites: payload,
+        allCharacters: payload,
       };
     case DELETE_FAVORITE:
       return {
         ...state,
-        myFavorites: state.myFavorites.filter((pers) => {
-          return pers.id !== payload; //si el que esta ahi adentro es igual al que llega por payload se queda afuera. si es distinto al payload entra al estado
-        }),
+        myFavorites: payload,
       };
     case FILTER:
       const filterCopy = [...state.allCharacters];

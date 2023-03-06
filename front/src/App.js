@@ -38,7 +38,7 @@ function App() {
   const onSearch = (character) => {
     let search = characters.filter((per) => per.id == character);
     if (search.length === 0) {
-      fetch(`http://localhost:3001/rickandmorty/onsearch/${character}`)
+      fetch(`http://localhost:3001/rickandmorty/character/${character}`)
         .then((response) => response.json())
         .then((data) => {
           if (data.name) {

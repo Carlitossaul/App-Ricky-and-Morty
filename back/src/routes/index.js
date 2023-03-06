@@ -1,13 +1,8 @@
-const { Router } = require("express");
-const getCharById = require("../controllers/getCharById");
-const getCharDetail = require("../controllers/getCharDetail");
+const express = require("express");
+const characters = require("./characters");
+const router = express.Router();
 
-const router = Router();
+router.use("/rickandmorty", characters);
+// router.use("/onsearch/:id", getCharById);
 
-router.get("/onsearch/:id", getCharById);
-
-router.get("/detail/:id", getCharDetail);
-
-module.exports = {
-  router,
-};
+module.exports = router;
