@@ -1,9 +1,11 @@
 .Favorites {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   align-items: center;
   gap: 3rem;
+  width: 100%;
+  height: 100vh;
 }
 
 .container {

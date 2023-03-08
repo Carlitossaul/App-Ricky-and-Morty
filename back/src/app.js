@@ -1,5 +1,5 @@
 const express = require("express");
-const routes = require("./routes/index");
+const mainRoutes = require("./routes/mainRoutes");
 const bodyParser = require("body-parser");
 const app = express();
 
@@ -18,6 +18,6 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/", routes);
+app.use("/", mainRoutes);
 
 module.exports = app;

@@ -6,27 +6,34 @@ export const FILTER = "FILTER";
 export const ORDER = "ORDER";
 
 export const addFavorite = (personaje) => {
-  return (dispatch) => {
-    axios
-      .post(`http://localhost:3001/rickandmorty/fav`, personaje) //porque aca no va el signo pesos?
-      .then((response) => {
-        dispatch({
-          type: ADD_FAVORITE,
-          payload: response.data,
-        });
+  return async function (dispatch) {
+    try {
+      const response = await axios.post(
+        `http://localhost:3001/rickandmorty/fav`,
+        personaje
+      );
+      dispatch({
+        type: ADD_FAVORITE,
+        payload: response.data,
       });
+    } catch (error) {
+      console.log(error);
+    }
   };
 };
 export const deleteFavorite = (id) => {
-  return (dispatch) => {
-    axios
-      .delete(`http://localhost:3001/rickandmorty/fav/${id}`) //porque aca no va el signo pesos?
-      .then((response) => {
-        return dispatch({
-          type: DELETE_FAVORITE,
-          payload: response.data,
-        });
+  return async function (dispatch) {
+    try {
+      const response = await axios.delete(
+        `http://localhost:3001/rickandmorty/fav/${id}`
+      );
+      dispatch({
+        type: DELETE_FAVORITE,
+        payload: response.data,
       });
+    } catch (error) {
+      console.log(error);
+    }
   };
 };
 export const filterCards = (status) => {
@@ -42,3 +49,14 @@ export const orderCards = (id) => {
     payload: id,
   };
 };
+
+// return (dispatch) => {
+//   axios
+//     .post(`http://localhost:3001/rickandmorty/fav`, personaje) //porque aca no va el signo pesos?
+//     .then((response) => {
+//       dispatch({
+//         type: ADD_FAVORITE,
+//         payload: response.data,
+//       });
+//     });
+// };
