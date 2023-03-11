@@ -4,6 +4,7 @@ export const ADD_FAVORITE = "ADD_FAVORITE";
 export const DELETE_FAVORITE = "DELETE_FAVORITE";
 export const FILTER = "FILTER";
 export const ORDER = "ORDER";
+export const GET_FAVS = "GET_FAVS";
 
 export const addFavorite = (personaje) => {
   return async function (dispatch) {
@@ -17,7 +18,7 @@ export const addFavorite = (personaje) => {
         payload: response.data,
       });
     } catch (error) {
-      console.log(error);
+      return dispatch({ type: "ERROR", payload: error });
     }
   };
 };
@@ -27,15 +28,29 @@ export const deleteFavorite = (id) => {
       const response = await axios.delete(
         `http://localhost:3001/rickandmorty/fav/${id}`
       );
-      dispatch({
+      return dispatch({
         type: DELETE_FAVORITE,
         payload: response.data,
       });
     } catch (error) {
-      console.log(error);
+      return dispatch({ type: "ERROR", payload: error });
     }
   };
 };
+
+export const getFavorite = () => {
+  return async function (dispatch) {
+    try {
+      const response = await axios(
+        `http://localhost:3001/rickandmorty/fav/get`
+      );
+      return dispatch({ type: "GET_FAVS", payload: response.data });
+    } catch (error) {
+      return dispatch({ type: "ERROR", payload: error });
+    }
+  };
+};
+
 export const filterCards = (status) => {
   return {
     type: FILTER,
