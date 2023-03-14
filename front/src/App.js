@@ -30,6 +30,11 @@ function App() {
     }
   };
 
+  const Random = () => {
+    let randomId = Math.floor(Math.random() * 826);
+    onSearch(randomId);
+  };
+
   const logout = () => {
     setAccess(false);
     navigate("/");
@@ -63,7 +68,9 @@ function App() {
 
   return (
     <div className={style.App}>
-      {location.pathname !== "/" && <Nav logout={logout} onSearch={onSearch} />}
+      {location.pathname !== "/" && (
+        <Nav Random={Random} logout={logout} onSearch={onSearch} />
+      )}
       <Routes>
         <Route path="/" element={<Form login={login} />} />
         <Route

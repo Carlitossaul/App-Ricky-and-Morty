@@ -1,12 +1,13 @@
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  gap: 1em;
   align-items: center;
   background-color: #f9d71c;
-  height: 5em;
+  height: 5.2em;
   margin-top: 2rem;
-  margin-left: 8rem;
-  margin-right: 8rem;
+  margin-left: 5em;
+  margin-right: 5em;
   border-radius: 4.5em;
   /* box-shadow: 1px 1px 3px #0d23459c; */
   border-bottom: 1px solid #f9d81ca1;
@@ -18,11 +19,21 @@
     23px 0 20px -23px rgba(255, 255, 255, 0.8),
     inset 0 0 40px rgba(255, 255, 255, 0.1), 0 3px 8px rgba(255, 215, 0, 0.6);
 }
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  max-width: 100%;
+  height: 4em; /* o cualquier altura que desees */
+  object-fit: cover;
+}
 
 .linksOne {
   display: flex;
   flex-wrap: wrap;
   margin-left: 3.5rem;
+  align-items: center;
 }
 
 .NavLink {
@@ -51,7 +62,9 @@
 }
 
 .divButon {
-  margin: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1em;
 }
 
 .button {
