@@ -9,10 +9,10 @@
 
 .container {
   border-radius: 7px;
-  margin: 0.5rem;
+  margin: 0.5em;
   padding: 10px;
   display: flex;
-  gap: 6rem;
+  gap: 6em;
   justify-content: center;
   flex-wrap: wrap;
   background-color: rgba(127, 255, 0, 0.5);
