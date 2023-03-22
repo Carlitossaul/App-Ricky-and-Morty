@@ -38,6 +38,7 @@ async function getDetailId(req, res) {
         species: response.data.species,
         status: response.data.status,
         origin: response.data.origin.name,
+        location: response.data.location.name,
       };
       res.status(200).json(character);
     } catch (error) {
