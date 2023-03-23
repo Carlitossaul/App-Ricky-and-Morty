@@ -1,5 +1,6 @@
 import Card from "../Card/Card";
 import style from "./Cards.module.css";
+import React, { useState, useEffect } from "react";
 
 const Cards = ({ characters, onClose }) => {
   return (

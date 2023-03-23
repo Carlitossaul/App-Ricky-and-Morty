@@ -57,12 +57,12 @@
 }
 
 .input[type="namber"] {
-  color: #ff2b6d;
+  color: #800080;
   font-size: 1.3rem;
 }
 
 .input::placeholder {
-  color: #ff2b6d;
+  color: #800080;
   font-size: 0.83em;
 }
 

@@ -10,6 +10,8 @@ import { useState, useEffect } from "react";
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { deleteFavorite } from "./Redux/actions/index.js";
+import Footer from "./components/Footer/Footer.jsx";
+import Welcome from "./components/Welcome/Welcome.jsx";
 //
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -71,6 +73,7 @@ function App() {
       {location.pathname !== "/" && (
         <Nav Random={Random} logout={logout} onSearch={onSearch} />
       )}
+      {location.pathname !== "/" && <Footer />}
       <Routes>
         <Route path="/" element={<Form login={login} />} />
         <Route
@@ -83,6 +86,7 @@ function App() {
         <Route exact path="/detail/:detailId" element={<Detail />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
+      {location.pathname !== "/" && <Welcome />}
     </div>
   );
 }
