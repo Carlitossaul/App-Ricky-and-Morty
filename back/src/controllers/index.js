@@ -1,5 +1,4 @@
 const axios = require("axios"); //esta forma de importar commonjs
-var favs = require("../utils/favs");
 
 function getCharacterId(req, res) {
   const { id } = req.params;
