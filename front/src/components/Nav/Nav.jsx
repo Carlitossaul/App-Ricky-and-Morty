@@ -1,7 +1,7 @@
 import React from "react";
 import SearchBar from "../SearchBar/SearchBar";
 import style from "./Nav.module.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import img from "../../assets/fotor_2023-3-14_8_5_33.png";
 
 const Nav = ({ onSearch, logout, Random }) => {
@@ -11,6 +11,9 @@ const Nav = ({ onSearch, logout, Random }) => {
   const handleRandom = () => {
     Random();
   };
+  const location = useLocation();
+  const isAboutOrFavorites =
+    location.pathname === "/about" || location.pathname === "/favorites";
 
   return (
     <nav className={style.container}>
@@ -44,13 +47,17 @@ const Nav = ({ onSearch, logout, Random }) => {
         </Link>
       </div>
 
-      <div className={style.SearchBar}>
-        <SearchBar onSearch={onSearch} />
-      </div>
+      {!isAboutOrFavorites && (
+        <div className={style.SearchBar}>
+          <SearchBar onSearch={onSearch} />
+        </div>
+      )}
       <div className={style.divButon}>
-        <button className={style.button} onClick={handleRandom}>
-          Add Random
-        </button>
+        {!isAboutOrFavorites && (
+          <button className={style.button} onClick={handleRandom}>
+            Add Random
+          </button>
+        )}
         <button className={style.button} onClick={handleSubmit}>
           Log Out
         </button>

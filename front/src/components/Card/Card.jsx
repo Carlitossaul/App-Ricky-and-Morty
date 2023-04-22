@@ -53,6 +53,7 @@ const Card = (props) => {
             X
           </button>
         </div>
+
         <NavLink
           id="detalles"
           data-tooltip-content="Ver detalles del personaje"
@@ -72,6 +73,7 @@ const Card = (props) => {
             </ul>
           </div>
         </NavLink>
+
         <Tooltip place="right" anchorId="detalles" />
       </div>
     </div>
