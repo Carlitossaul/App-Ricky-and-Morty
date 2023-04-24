@@ -2,7 +2,7 @@ const axios = require("axios"); //esta forma de importar commonjs
 
 function getCharacterId(req, res) {
   const { id } = req.params;
-  console.log(id);
+  // console.log(id);
   axios
     .get(`https://rickandmortyapi.com/api/character/${id}`) //llamado de un personaje en especifico
     .then(
