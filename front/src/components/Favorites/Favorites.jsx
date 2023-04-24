@@ -1,4 +1,3 @@
-import { connect } from "react-redux";
 import style from "./Favorites.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -10,20 +9,15 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
 const Favorites = () => {
-  console.log(myFavorites);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const myFavorites = useSelector((state) => state.myFavorites);
   const idUser = useSelector((state) => state.idUser);
+  const myFavorites = useSelector((state) => state.myFavorites);
 
   useEffect(() => {
     dispatch(getFavorite(idUser));
-    console.log(myFavorites);
-    return () => {
-      dispatch(getFavorite(idUser));
-    };
-  }, [myFavorites]);
+  }, [dispatch]);
 
   const handeleOrder = (event) => {
     dispatch(orderCards(event.target.value));
@@ -54,12 +48,14 @@ const Favorites = () => {
         </div>
       </div>
       <div className={style.container}>
-        {myFavorites.map((pers, i) => (
-          <div key={i} className={style.card}>
-            <h1 className={style.title}>{pers.name}</h1>
-            <img className={style.image} src={pers.image} />
-          </div>
-        ))}
+        {myFavorites &&
+          myFavorites.length &&
+          myFavorites.map((pers, i) => (
+            <div key={i} className={style.card}>
+              <h1 className={style.title}>{pers.name}</h1>
+              <img className={style.image} src={pers.image} />
+            </div>
+          ))}
       </div>
     </div>
   );

@@ -14,7 +14,6 @@ export const addFavorite = (idUser, personaje) => {
         `http://localhost:3001/rickandmorty/fav?idUser=${idUser}`,
         personaje
       );
-
       if (response.data) {
         dispatch({ type: ADD_FAVORITE, payload: response.data });
       }
@@ -44,10 +43,8 @@ export const getFavorite = (idUser) => {
       const response = await axios.get(
         `http://localhost:3001/rickandmorty/fav?idUser=${idUser}`
       );
-      console.log(response.data);
-      if (response.data) {
-        dispatch({ type: GET_FAVS, payload: response.data });
-      }
+
+      dispatch({ type: GET_FAVS, payload: response.data });
     } catch (error) {
       console.log(error);
     }

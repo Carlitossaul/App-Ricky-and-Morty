@@ -33,7 +33,7 @@ function App() {
 
     if (true) {
       console.log("entre");
-      setAccess(true);
+      setAccess(idUser);
       navigate("/home");
     }
   };

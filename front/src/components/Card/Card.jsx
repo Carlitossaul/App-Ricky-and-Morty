@@ -1,14 +1,9 @@
 import style from "./Card.module.css";
-import { useSelector, useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { Tooltip } from "react-tooltip";
 import { connect } from "react-redux";
 import { useState, useEffect } from "react";
-import {
-  addFavorite,
-  deleteFavorite,
-  getFavorite,
-} from "../../Redux/actions/index.js";
+import { addFavorite, deleteFavorite } from "../../Redux/actions/index.js";
 
 const Card = (props) => {
   const [isFav, setIsfav] = useState(false);
@@ -105,9 +100,9 @@ export const mapDispatchToProps = (dispatch) => {
     deleteFavorite: (id, idUser) => {
       dispatch(deleteFavorite(id, idUser));
     },
-    getFavorite: (idUser) => {
-      dispatch(getFavorite(idUser));
-    },
+    // getFavorite: (idUser) => {
+    //   dispatch(getFavorite(idUser));
+    // },
   };
 };
 

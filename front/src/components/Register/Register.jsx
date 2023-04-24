@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import style from "./Register.module.css";
 
 const Register = () => {
   const [user, setUser] = useState({
@@ -27,7 +28,7 @@ const Register = () => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form className={style.form} onSubmit={handleSubmit}>
         <label htmlFor="email">Email</label>
         <input
           name="email"

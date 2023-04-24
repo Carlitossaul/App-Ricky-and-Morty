@@ -17,13 +17,14 @@ const initialState = {
 const rootReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case ADD_FAVORITE:
+      console.log(state);
       console.log(payload);
-      const addFavorites = [...state.allCharacters, payload];
-      console.log(addFavorites);
+      const result = [...payload];
+
       return {
         ...state,
-        myFavorites: [...state.myFavorites, payload],
-        allCharacters: [...addFavorites],
+        myFavorites: [...result],
+        allCharacters: [...result],
       };
     case GET_FAVS:
       console.log(payload);
