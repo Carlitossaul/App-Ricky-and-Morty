@@ -31,9 +31,9 @@ function App() {
   const login = (userData) => {
     dispatch(validation(userData.username, userData.password));
 
-    if (true) {
+    if (idUser) {
       console.log("entre");
-      setAccess(idUser);
+      setAccess(true);
       navigate("/home");
     }
   };
