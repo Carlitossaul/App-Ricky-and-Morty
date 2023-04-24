@@ -79,7 +79,7 @@ function App() {
         <>
           <Nav Random={Random} logout={logout} onSearch={onSearch} />
           <Footer />
-          <Welcome />
+          {/* <Welcome /> */}
         </>
       )}
       <Routes>
