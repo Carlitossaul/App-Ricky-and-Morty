@@ -18,9 +18,6 @@ const rootReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case ADD_FAVORITE:
       console.log(payload);
-      if (!state.allCharacters) {
-        return state;
-      }
       const addFavorites = [...state.allCharacters, payload];
       console.log(addFavorites);
       return {
