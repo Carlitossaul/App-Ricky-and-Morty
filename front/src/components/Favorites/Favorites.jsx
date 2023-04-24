@@ -1,13 +1,29 @@
 import { connect } from "react-redux";
 import style from "./Favorites.module.css";
-import { useDispatch } from "react-redux";
-import { orderCards, filterCards } from "../../Redux/actions/index";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  orderCards,
+  filterCards,
+  getFavorite,
+} from "../../Redux/actions/index";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
-const Favorites = ({ myFavorites }) => {
+const Favorites = () => {
   console.log(myFavorites);
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
+  const myFavorites = useSelector((state) => state.myFavorites);
+  const idUser = useSelector((state) => state.idUser);
+
+  useEffect(() => {
+    dispatch(getFavorite(idUser));
+    console.log(myFavorites);
+    return () => {
+      dispatch(getFavorite(idUser));
+    };
+  }, [myFavorites]);
 
   const handeleOrder = (event) => {
     dispatch(orderCards(event.target.value));
@@ -49,10 +65,4 @@ const Favorites = ({ myFavorites }) => {
   );
 };
 
-export const mapStateToProps = (state) => {
-  return {
-    myFavorites: state.myFavorites,
-  };
-};
-
-export default connect(mapStateToProps, null)(Favorites);
+export default Favorites;

@@ -1,29 +1,46 @@
 import style from "./Card.module.css";
+import { useSelector, useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { Tooltip } from "react-tooltip";
 import { connect } from "react-redux";
 import { useState, useEffect } from "react";
-import { addFavorite, deleteFavorite } from "../../Redux/actions/index.js";
+import {
+  addFavorite,
+  deleteFavorite,
+  getFavorite,
+} from "../../Redux/actions/index.js";
 
 const Card = (props) => {
   const [isFav, setIsfav] = useState(false);
 
+  console.log(props.myFavorites);
+  console.log(props.idUser);
+
   useEffect(() => {
-    props.myFavorites.forEach((fav) => {
-      if (fav.id === props.detailId) {
-        setIsfav(true);
-      }
-    });
-  }, [props.myFavorites]);
+    props.myFavorites &&
+      props.myFavorites.forEach((fav) => {
+        if (fav.id === props.detailId) {
+          setIsfav(true);
+        }
+      });
+  }, []);
+
+  console.log(props.myFavorites);
 
   const handleFavorite = () => {
     if (isFav) {
       setIsfav(false);
-      props.deleteFavorite(props.id);
+      props.deleteFavorite(props.id, props.idUser);
     }
     if (!isFav) {
       setIsfav(true);
-      props.addFavorite(props);
+      props.addFavorite(props.idUser, {
+        id: props.id,
+        name: props.name,
+        species: props.species,
+        gender: props.gender,
+        image: props.image,
+      });
     }
   };
 
@@ -82,11 +99,14 @@ const Card = (props) => {
 
 export const mapDispatchToProps = (dispatch) => {
   return {
-    addFavorite: (personaje) => {
-      dispatch(addFavorite(personaje));
+    addFavorite: (personaje, idUser) => {
+      dispatch(addFavorite(personaje, idUser));
     },
-    deleteFavorite: (id) => {
-      dispatch(deleteFavorite(id));
+    deleteFavorite: (id, idUser) => {
+      dispatch(deleteFavorite(id, idUser));
+    },
+    getFavorite: (idUser) => {
+      dispatch(getFavorite(idUser));
     },
   };
 };
@@ -94,6 +114,7 @@ export const mapDispatchToProps = (dispatch) => {
 export const mapStateToProps = (state) => {
   return {
     myFavorites: state.myFavorites,
+    idUser: state.idUser,
   };
 };
 

@@ -8,25 +8,31 @@ import Form from "./components/Form/Form.jsx";
 import style from "./App.module.css";
 import { useState, useEffect } from "react";
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { deleteFavorite } from "./Redux/actions/index.js";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteFavorite, validation } from "./Redux/actions/index.js";
 import Footer from "./components/Footer/Footer.jsx";
 import Welcome from "./components/Welcome/Welcome.jsx";
+import Register from "./components/Register/Register.jsx";
+
 //
 function App() {
   const [characters, setCharacters] = useState([]);
-
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const [access, setAccess] = useState(false);
-  const username = "carlos@test.com";
-  const password = "Abcd1234";
 
   useEffect(() => {
     !access && navigate("/");
   }, [access]);
 
+  const idUser = useSelector((state) => state.idUser);
+  console.log(idUser);
+
   const login = (userData) => {
-    if (userData.password === password && userData.username === username) {
+    dispatch(validation(userData.username, userData.password));
+
+    if (true) {
+      console.log("entre");
       setAccess(true);
       navigate("/home");
     }
@@ -59,7 +65,6 @@ function App() {
     }
   };
 
-  const dispatch = useDispatch();
   const onClose = (id) => {
     setCharacters(characters.filter((pers) => pers.id !== id));
     dispatch(deleteFavorite(id));
@@ -70,23 +75,34 @@ function App() {
 
   return (
     <div className={style.App}>
-      {location.pathname !== "/" && (
-        <Nav Random={Random} logout={logout} onSearch={onSearch} />
+      {access && (
+        <>
+          <Nav Random={Random} logout={logout} onSearch={onSearch} />
+          <Footer />
+          <Welcome />
+        </>
       )}
-      {location.pathname !== "/" && <Footer />}
       <Routes>
-        <Route path="/" element={<Form login={login} />} />
-        <Route
-          exact
-          path="/home"
-          element={<Cards characters={characters} onClose={onClose} />}
-        />
-        <Route exact path="/favorites" element={<Favorites />} />
-        <Route exact path="/about" element={<About />} />
-        <Route exact path="/detail/:detailId" element={<Detail />} />
-        <Route path="*" element={<Error404 />} />
+        {access ? (
+          <>
+            <Route
+              exact
+              path="/home"
+              element={<Cards characters={characters} onClose={onClose} />}
+            />
+            <Route exact path="/favorites" element={<Favorites />} />
+            <Route exact path="/about" element={<About />} />
+            <Route exact path="/detail/:detailId" element={<Detail />} />
+            <Route path="*" element={<Error404 />} />
+          </>
+        ) : (
+          <>
+            <Route path="/" element={<Form login={login} />} />
+            <Route exact path="/register" element={<Register />} />
+            <Route path="*" element={<Error404 />} />
+          </>
+        )}
       </Routes>
-      {location.pathname !== "/" && <Welcome />}
     </div>
   );
 }

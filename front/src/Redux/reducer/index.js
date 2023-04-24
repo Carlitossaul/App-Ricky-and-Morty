@@ -4,27 +4,44 @@ import {
   FILTER,
   GET_FAVS,
   ORDER,
+  VALIDATION,
 } from "../actions";
 
 const initialState = {
   myFavorites: [],
   allCharacters: [],
   errors: {},
+  idUser: null,
 };
 
 const rootReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case ADD_FAVORITE:
+      console.log(payload);
+      if (!state.allCharacters) {
+        return state;
+      }
+      const addFavorites = [...state.allCharacters, payload];
+      console.log(addFavorites);
       return {
         ...state,
-        myFavorites: payload,
-        allCharacters: payload,
-        errors: {},
+        myFavorites: [...state.myFavorites, payload],
+        allCharacters: [...addFavorites],
+      };
+    case GET_FAVS:
+      console.log(payload);
+      return {
+        ...state,
+        myFavorites: [...payload],
+        allCharacters: [...payload],
       };
     case DELETE_FAVORITE:
+      let stateCopy = [...state.allCharacters];
+      let filtrados = stateCopy.filter((char) => char.id !== payload);
       return {
         ...state,
-        myFavorites: payload,
+        myFavorites: filtrados,
+        allCharacters: filtrados,
         errors: {},
       };
     case FILTER:
@@ -47,16 +64,16 @@ const rootReducer = (state = initialState, { type, payload }) => {
         ...state,
         myFavorites: orderCopy,
       };
-    case GET_FAVS:
-      return {
-        ...state,
-        myFavorites: payload,
-        errors: {},
-      };
+
     case "ERROR":
       return {
         ...state,
         errors: payload,
+      };
+    case VALIDATION:
+      return {
+        state,
+        idUser: payload,
       };
     default:
       return { ...state };
