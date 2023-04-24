@@ -8,7 +8,7 @@ const getFavs = async (req, res) => {
     const favs = await Favorite.findAll({
       include: [{ model: User, where: { id: idUser } }],
     });
-    console.log("favs///////////////////////////////////////", favs);
+    // console.log("favs///////////////////////////////////////", favs);
     return res.status(200).json(favs);
   } catch (error) {
     return res.status(500).json({ message: error });

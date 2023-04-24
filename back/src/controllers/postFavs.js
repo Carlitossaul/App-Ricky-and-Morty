@@ -20,9 +20,13 @@ const postFavs = async (req, res) => {
         image,
       },
     });
-
     fav.addUser(idUser);
-    res.status(200).json(fav);
+
+    const favs = await Favorite.findAll({
+      include: [{ model: User, where: { id: idUser } }],
+    });
+
+    res.status(200).json(favs);
   } catch (error) {
     res.status(500).json({ message: error });
   }
