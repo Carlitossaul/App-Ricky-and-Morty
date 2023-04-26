@@ -6,6 +6,8 @@ export const FILTER = "FILTER";
 export const ORDER = "ORDER";
 export const GET_FAVS = "GET_FAVS";
 export const VALIDATION = "VALIDATION";
+export const ACCESS = "ACCESS";
+export const GET_USERS = "GET_USERS";
 
 export const addFavorite = (idUser, personaje) => {
   return async function (dispatch) {
@@ -65,17 +67,30 @@ export const orderCards = (id) => {
   };
 };
 
-export const validation = (email, password) => async (dispatch) => {
+export const validationBack = (email, password) => async (dispatch) => {
   try {
     const obj = await axios.get(
       `http://localhost:3001/rickandmorty/login?email=${email}&password=${password}`
     );
-    console.log(obj.data);
     if (obj.data.access) {
       dispatch({ type: VALIDATION, payload: obj.data.id });
     }
   } catch (error) {
     Error({ error: error.message });
+  }
+};
+
+export const getUsers = () => async (dispatch) => {
+  try {
+    const response = await axios.get(
+      "http://localhost:3001/rickandmorty/login/users"
+    );
+    dispatch({
+      type: GET_USERS,
+      payload: response.data,
+    });
+  } catch (error) {
+    console.log(error);
   }
 };
 

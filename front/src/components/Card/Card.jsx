@@ -8,9 +8,6 @@ import { addFavorite, deleteFavorite } from "../../Redux/actions/index.js";
 const Card = (props) => {
   const [isFav, setIsfav] = useState(false);
 
-  console.log(props.myFavorites);
-  console.log(props.idUser);
-
   useEffect(() => {
     props.myFavorites &&
       props.myFavorites.forEach((fav) => {
@@ -19,8 +16,6 @@ const Card = (props) => {
         }
       });
   }, []);
-
-  console.log(props.myFavorites);
 
   const handleFavorite = () => {
     if (isFav) {

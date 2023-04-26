@@ -3,6 +3,7 @@ import {
   DELETE_FAVORITE,
   FILTER,
   GET_FAVS,
+  GET_USERS,
   ORDER,
   VALIDATION,
 } from "../actions";
@@ -12,13 +13,12 @@ const initialState = {
   allCharacters: [],
   errors: {},
   idUser: null,
+  users: [],
 };
 
 const rootReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case ADD_FAVORITE:
-      console.log(state);
-      console.log(payload);
       const result = [...payload];
 
       return {
@@ -27,7 +27,6 @@ const rootReducer = (state = initialState, { type, payload }) => {
         allCharacters: [...result],
       };
     case GET_FAVS:
-      console.log(payload);
       return {
         ...state,
         myFavorites: [...payload],
@@ -72,6 +71,12 @@ const rootReducer = (state = initialState, { type, payload }) => {
       return {
         state,
         idUser: payload,
+        acceso: true,
+      };
+    case GET_USERS:
+      return {
+        ...state,
+        users: payload,
       };
     default:
       return { ...state };

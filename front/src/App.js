@@ -9,7 +9,11 @@ import style from "./App.module.css";
 import { useState, useEffect } from "react";
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteFavorite, validation } from "./Redux/actions/index.js";
+import {
+  deleteFavorite,
+  getUsers,
+  validationBack,
+} from "./Redux/actions/index.js";
 import Footer from "./components/Footer/Footer.jsx";
 import Welcome from "./components/Welcome/Welcome.jsx";
 import Register from "./components/Register/Register.jsx";
@@ -22,17 +26,20 @@ function App() {
   const [access, setAccess] = useState(false);
 
   useEffect(() => {
+    dispatch(getUsers());
     !access && navigate("/");
   }, [access]);
 
-  const idUser = useSelector((state) => state.idUser);
-  console.log(idUser);
+  const users = useSelector((state) => state.users);
 
   const login = (userData) => {
-    dispatch(validation(userData.username, userData.password));
+    let user = users.find(
+      (user) =>
+        user.password === userData.password && user.username === userData.email
+    );
 
-    if (idUser) {
-      console.log("entre");
+    if (user) {
+      dispatch(validationBack(userData.username, userData.password));
       setAccess(true);
       navigate("/home");
     }
