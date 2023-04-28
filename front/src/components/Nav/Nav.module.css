@@ -166,17 +166,19 @@
 @media (min-width: 768px) and (max-width: 992px) {
   /* Estilos para pantallas con ancho entre 768px y 992px */
   .container {
+    margin: 0px;
+    gap: 3px;
+    font-size: 1.2em;
   }
   .linksOne {
-  }
-
-  .NavLink {
+    font-size: 14px;
   }
 
   .divButon {
   }
 
   .button {
+    font-size: 9px;
   }
 }
 
@@ -184,5 +186,6 @@
   /* Estilos para pantallas con ancho mínimo de 992px */
 
   .container {
+    margin: 0px;
   }
 }

@@ -15,6 +15,7 @@
   background-color: #ddd;
   height: 33em;
   width: 30em;
+  padding-top: 2em;
   border-radius: 9px;
   border: 1px solid rgba(221, 221, 221, 0.87);
   opacity: 0.98;
@@ -51,8 +52,8 @@
   padding: 10px;
   border: none;
   border-radius: 5px;
-  font-size: 14pt;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
   letter-spacing: 1px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -72,7 +73,7 @@
 }
 
 .input {
-  width: 90%;
+  width: 24em;
   background-color: #f1f3f4;
   border: none;
   border-radius: 8px;
@@ -127,7 +128,7 @@
 @media (max-width: 391px) {
   .form {
     width: 96%;
-    height: 30em;
+    height: 36em;
   }
   .login {
     font-size: 15px;
@@ -139,6 +140,9 @@
 
   .video {
     display: none;
+  }
+  .input {
+    width: 13.5em;
   }
 }
 @media (min-width: 391px) and (max-width: 768px) {

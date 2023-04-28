@@ -134,6 +134,10 @@
 
 @media (min-width: 768px) and (max-width: 992px) {
   /* Estilos para pantallas con ancho entre 768px y 992px */
+  .container {
+    margin: 0px;
+    font-size: 14px;
+  }
 }
 
 @media (min-width: 992px) {

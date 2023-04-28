@@ -144,6 +144,9 @@ button:hover {
 
 @media (min-width: 768px) and (max-width: 992px) {
   /* Estilos para pantallas con ancho entre 768px y 992px */
+  .container {
+    font-size: 0.7em;
+  }
 }
 
 @media (min-width: 992px) {
