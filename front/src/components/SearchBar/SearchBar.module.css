@@ -105,30 +105,37 @@
 @media (min-width: 391px) and (max-width: 768px) {
   /* Estilos para pantallas con ancho máximo de 768px */
   .searchbar {
-    display: flex;
-    justify-content: center;
+    /* margin-left: 4em; */
   }
-
   .container {
-    font-size: 0.9rem;
+    font-size: 14px;
+    margin: 0;
     display: flex;
-    justify-content: center;
-    margin-left: 1.1rem;
+    align-items: center;
+    justify-content: space-evenly;
   }
 
   .input {
-    font-size: 0.4rem;
+    font-size: 0.5em;
     padding: 3px;
+    width: 9em;
   }
 
   .input[type="namber"] {
     color: #663302;
-    font-size: 1rem;
+    font-size: 13px;
   }
 
   .input::placeholder {
     color: #663302;
-    font-size: 1rem;
+    font-size: 13px;
+  }
+  .img {
+    height: 14px;
+    width: 14px;
+  }
+  .button {
+    font-size: 20px;
   }
 }
 

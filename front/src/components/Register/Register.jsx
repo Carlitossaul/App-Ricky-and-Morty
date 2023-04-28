@@ -65,57 +65,52 @@ const Register = () => {
         <img className={style.img} src={img2} alt="rick" />
       </div>
       <form className={style.form} onSubmit={handleSubmit}>
-        <div className={style.containerForm}>
-          <h1 className={style.title}>Get started</h1>
-          <h2 className={style.subtitle}>Create your account now</h2>
-          <div className={style.username}>
-            <label className={style.label} htmlFor="email">
-              Mail
-            </label>
-            <input
-              onChange={handleChange}
-              // autoComplete="off"
-              type="text"
-              name="email"
-              placeholder="Write a mail..."
-              value={user.email}
-              className={style.input}
-            />
-            <span className={style.span}>
-              {errors.email ? errors.email : ""}
-            </span>
-          </div>
-          <div className={style.password}>
-            <label className={style.label} htmlFor="password">
-              Password
-            </label>
-            <input
-              onChange={handleChange}
-              type="password"
-              name="password"
-              placeholder="Write your password..."
-              value={user.password}
-              className={style.input}
-            />
-            <span className={style.span}>
-              {errors.password ? errors.password : ""}
-            </span>
-            <label className={style.label} htmlFor="password2">
-              Repeat Password
-            </label>
-            <input
-              onChange={handleChange}
-              type="password"
-              name="password2"
-              placeholder="Write your password..."
-              className={style.input}
-              value={user.password2}
-            />
-            <span className={style.span}>
-              {errors.password2 ? errors.password2 : ""}
-            </span>
-          </div>
-
+        <h1 className={style.title}>Get started</h1>
+        <h2 className={style.subtitle}>Create your account now</h2>
+        <div className={style.username}>
+          <label className={style.label} htmlFor="email">
+            Mail
+          </label>
+          <input
+            onChange={handleChange}
+            autoComplete="off"
+            type="text"
+            name="email"
+            placeholder="Write a mail..."
+            value={user.email}
+            className={style.input}
+          />
+          <span className={style.span}>{errors.email ? errors.email : ""}</span>
+        </div>
+        <div className={style.password}>
+          <label className={style.label} htmlFor="password">
+            Password
+          </label>
+          <input
+            onChange={handleChange}
+            type="password"
+            name="password"
+            placeholder="Write your password..."
+            value={user.password}
+            className={style.input}
+          />
+          <span className={style.span}>
+            {errors.password ? errors.password : ""}
+          </span>
+          <label className={style.label} htmlFor="password2">
+            Repeat Password
+          </label>
+          <input
+            onChange={handleChange}
+            type="password"
+            name="password2"
+            placeholder="Write your password..."
+            className={style.input}
+            value={user.password2}
+          />
+          <span className={style.span}>
+            {errors.password2 ? errors.password2 : ""}
+          </span>
           <button className={style.register} type="submit">
             Register
           </button>

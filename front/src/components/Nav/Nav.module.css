@@ -104,6 +104,13 @@
     border-radius: 0px;
     height: 5em;
   }
+  .SearchBar {
+    margin-right: 3em;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
 
   .logoContainer {
     position: absolute;
@@ -148,18 +155,55 @@
 @media (min-width: 391px) and (max-width: 768px) {
   /* Estilos para pantallas con ancho máximo de 768px */
   .container {
+    margin: 0px 0px;
+    border-radius: 0px;
+    height: 5em;
+  }
+
+  .SearchBar {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logoContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 1.4px;
+  }
+  .logo {
+    height: 5em;
   }
 
   .linksOne {
-  }
-
-  .NavLink {
+    font-size: 14px;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
   }
 
   .divButon {
+    display: flex;
+    margin-right: 2px;
+    flex-direction: column-reverse;
+    position: absolute;
+    top: 10px;
+    gap: 14px;
+    right: 1px;
   }
 
   .button {
+    font-size: 10px;
+    text-align: center;
+    width: 5em;
+    border-radius: 70px;
+    padding: 7px 2.5px;
+    text-transform: capitalize;
+    font-weight: 600;
   }
 }
 

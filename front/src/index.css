@@ -42,14 +42,15 @@ body {
 
 @media (max-width: 391px) {
   body {
-    /* background-image: none; */
+    background-image: none;
+    background-color: #252525;
   }
 }
 @media (min-width: 391px) and (max-width: 768px) {
   /* Estilos para pantallas con ancho máximo de 768px */
   body {
-    /* background-color: #601816; */
-    /* background-image: none; */
+    background-color: #252525;
+    background-image: none;
   }
 }
 

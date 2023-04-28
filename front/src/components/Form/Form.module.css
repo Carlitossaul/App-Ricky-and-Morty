@@ -26,20 +26,19 @@
   display: flex;
   flex-direction: column;
   gap: 0.7em;
-  width: 80%;
 }
 
 .password {
   display: flex;
   flex-direction: column;
   gap: 0.7em;
-  width: 80%;
 }
 
 .button {
   display: flex;
   flex-direction: column;
-  width: 82%;
+  width: 100%;
+  align-items: center;
 }
 
 .login {
@@ -50,6 +49,7 @@
   color: #333;
   text-align: center;
   padding: 10px;
+  width: 24em;
   border: none;
   border-radius: 5px;
   font-size: 16px;
@@ -132,6 +132,7 @@
   }
   .login {
     font-size: 15px;
+    width: 14em;
   }
 
   .container {
@@ -142,14 +143,30 @@
     display: none;
   }
   .input {
-    width: 13.5em;
+    width: 13em;
   }
 }
 @media (min-width: 391px) and (max-width: 768px) {
   /* Estilos para pantallas con ancho máximo de 768px */
+  .form {
+    height: 36em;
+    width: 90%;
+  }
+
+  .login {
+    font-size: 15px;
+    width: 20em;
+  }
+
+  .container {
+    background: none;
+  }
+
   .video {
     display: none;
-    object-fit: contain;
+  }
+  .input {
+    width: 18em;
   }
 }
 

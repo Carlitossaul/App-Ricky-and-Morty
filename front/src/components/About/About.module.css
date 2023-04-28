@@ -63,6 +63,14 @@
 }
 @media (min-width: 391px) and (max-width: 768px) {
   /* Estilos para pantallas con ancho máximo de 768px */
+  .parrafo {
+    font-size: 12px;
+    width: 100%;
+    line-height: 18px;
+  }
+  .h1 {
+    font-size: 22px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {

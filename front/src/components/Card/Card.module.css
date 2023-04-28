@@ -140,13 +140,16 @@ button:hover {
 }
 @media (min-width: 391px) and (max-width: 768px) {
   /* Estilos para pantallas con ancho máximo de 768px */
+  .container {
+    font-size: 0.8em;
+  }
+  .card {
+    /* font-size: 0.5em; */
+  }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
   /* Estilos para pantallas con ancho entre 768px y 992px */
-  .container {
-    font-size: 0.7em;
-  }
 }
 
 @media (min-width: 992px) {

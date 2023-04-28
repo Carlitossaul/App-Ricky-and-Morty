@@ -11,10 +11,6 @@
   align-items: center;
   justify-content: center;
   background-color: #ffffff;
-  padding: 0px 25px;
-  margin: 1.1em 4px;
-  border-radius: 8px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 .img {
   width: 34em;
@@ -32,20 +28,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50%;
-}
-
-.containerForm {
-  display: flex;
-  align-items: center;
   flex-direction: column;
-  justify-content: center;
-  /* background-color: #fff; */
+  width: 50%;
   gap: 1.6em;
-  height: 43em;
-  width: 30em;
-  border-radius: 9px;
-  opacity: 0.98;
 }
 
 .subtitle {
@@ -57,22 +42,20 @@
 .username {
   display: flex;
   flex-direction: column;
-  gap: 0.7em;
-  width: 80%;
+  gap: 0.5em;
 }
 
 .password {
   display: flex;
   flex-direction: column;
-  gap: 0.7em;
-  width: 80%;
+  gap: 0.5em;
 }
 .label {
   font-weight: 500;
   font-size: 20px;
 }
 .input {
-  width: 100%;
+  width: 26em;
   background-color: #f1f3f4;
   border: none;
   border-radius: 8px;
@@ -99,7 +82,7 @@
 }
 
 .register {
-  width: 80%;
+  width: 22.5em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -125,9 +108,10 @@
 }
 
 .goBack {
-  align-self: flex-start;
-  margin-top: 5px;
-  margin-left: 5px;
+  /* align-self: flex-start; */
+  position: absolute;
+  top: 6px;
+  left: 6px;
   cursor: pointer;
   border-radius: 100px;
   padding: 3px;
@@ -162,9 +146,37 @@
   .subtitle {
     font-size: 1em;
   }
+  .input {
+    width: 14em;
+  }
+  .register {
+    width: 12em;
+  }
 }
 @media (min-width: 391px) and (max-width: 768px) {
   /* Estilos para pantallas con ancho máximo de 768px */
+  .containerWelcome {
+    display: none;
+  }
+  .containerForm {
+    width: 100%;
+    gap: 5px;
+  }
+  .form {
+    width: 100%;
+  }
+  .title {
+    font-size: 1.8em;
+  }
+  .subtitle {
+    font-size: 1.4em;
+  }
+  .input {
+    width: 18em;
+  }
+  .register {
+    width: 15.5em;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
@@ -180,7 +192,7 @@
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 993px) and (max-width: 1245px) {
   /* Estilos para pantallas con ancho mínimo de 992px */
   .containerWelcome {
     display: none;

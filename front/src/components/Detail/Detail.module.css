@@ -17,16 +17,19 @@
   gap: 2em;
   background-color: rgba(0, 255, 170, 0.5);
   border: 1px solid #252525;
-  height: 22em;
+  height: 30em;
+  width: 50em;
 }
 
 .info {
   color: black;
+  /* font-size: 0.8em; */
 }
 
 .text {
-  line-height: 2.5em;
+  line-height: 2em;
   font-style: italic;
+  font-size: 1.4em;
 }
 
 .image {
@@ -91,7 +94,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 95%;
+    /* width: 95%; */
     margin: 0px;
     padding: 0px;
   }
@@ -101,10 +104,63 @@
 }
 @media (min-width: 391px) and (max-width: 768px) {
   /* Estilos para pantallas con ancho máximo de 768px */
+  .container {
+    display: flex;
+    width: 95%;
+    min-height: 100%;
+    flex-direction: row;
+    gap: 0;
+    margin: 0px;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 2em;
+  }
+  .button {
+    position: absolute;
+    top: 9.5em;
+    left: 0.5em;
+    background-color: rgba(0, 255, 170, 0.5);
+  }
+
+  .button:hover {
+    background-color: rgb(0, 255, 170);
+    color: #333;
+    border: none;
+  }
+  .info {
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1em;
+  }
+  .divImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 95%; */
+    margin: 0px;
+    padding: 0px;
+  }
+  .image {
+    width: 14em;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
   /* Estilos para pantallas con ancho entre 768px y 992px */
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 40em;
+    gap: 20px;
+    width: 30em;
+    margin: 0px;
+    padding: 0px;
+  }
 }
 
 @media (min-width: 992px) {
