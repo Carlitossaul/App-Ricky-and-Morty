@@ -12,6 +12,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   deleteFavorite,
   getUsers,
+  idUser,
   validationBack,
 } from "./Redux/actions/index.js";
 import Footer from "./components/Footer/Footer.jsx";
@@ -39,7 +40,7 @@ function App() {
     );
 
     if (user) {
-      dispatch(validationBack(userData.username, userData.password));
+      dispatch(idUser(user.id));
       setAccess(true);
       navigate("/home");
     }

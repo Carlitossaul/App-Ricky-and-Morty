@@ -91,7 +91,7 @@ button:hover {
 }
 
 .image {
-  border: solid 1px rgba(0, 255, 170, 0.6);
+  border: solid 1px rgba(0, 255, 170, 0.2);
   border-radius: 5px;
   margin: auto;
   max-width: 100%;
@@ -111,15 +111,14 @@ button:hover {
 
 .data {
   color: #252525;
-  font-size: 0.6em;
+  font-size: 14px;
   padding: 5px;
   margin: 5px;
-  text-shadow: 1px 1px #24251f;
 }
 
 .text {
-  font-weight: 600;
-  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
 }
 
 .ulData {
@@ -135,6 +134,9 @@ button:hover {
 }
 
 @media (max-width: 391px) {
+  .container {
+    font-size: 0.8em;
+  }
 }
 @media (min-width: 391px) and (max-width: 768px) {
   /* Estilos para pantallas con ancho máximo de 768px */

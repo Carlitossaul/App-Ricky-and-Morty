@@ -4,6 +4,7 @@ import {
   FILTER,
   GET_FAVS,
   GET_USERS,
+  ID_USER,
   ORDER,
   VALIDATION,
 } from "../actions";
@@ -11,7 +12,6 @@ import {
 const initialState = {
   myFavorites: [],
   allCharacters: [],
-  errors: {},
   idUser: null,
   users: [],
 };
@@ -20,7 +20,6 @@ const rootReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case ADD_FAVORITE:
       const result = [...payload];
-
       return {
         ...state,
         myFavorites: [...result],
@@ -39,7 +38,6 @@ const rootReducer = (state = initialState, { type, payload }) => {
         ...state,
         myFavorites: filtrados,
         allCharacters: filtrados,
-        errors: {},
       };
     case FILTER:
       const filterCopy = [...state.allCharacters];
@@ -62,16 +60,10 @@ const rootReducer = (state = initialState, { type, payload }) => {
         myFavorites: orderCopy,
       };
 
-    case "ERROR":
-      return {
-        ...state,
-        errors: payload,
-      };
-    case VALIDATION:
+    case ID_USER:
       return {
         state,
         idUser: payload,
-        acceso: true,
       };
     case GET_USERS:
       return {

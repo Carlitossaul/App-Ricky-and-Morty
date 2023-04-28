@@ -9,6 +9,7 @@
 
 .container {
   border-radius: 7px;
+  width: 80%;
   margin: 0.5em;
   padding: 10px;
   display: flex;
@@ -26,7 +27,7 @@
 }
 
 .image {
-  width: 14rem;
+  width: 14em;
   border: 0.5px solid #252525;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -36,8 +37,6 @@
 .text {
   color: black;
   font-weight: 600;
-  text-shadow: 1px 1px 1px #252525;
-  line-height: 2em;
   padding: 15px;
   font-family: "Roboto Mono", monospace;
 }
@@ -47,8 +46,20 @@
   font-family: "Source Sans Pro", sans-serif;
   text-shadow: 1px 1px 3px #00ffaa;
 }
+.parrafo {
+  width: 50em;
+  line-height: 2em;
+}
 
 @media (max-width: 391px) {
+  .parrafo {
+    font-size: 12px;
+    width: 100%;
+    line-height: 18px;
+  }
+  .h1 {
+    font-size: 22px;
+  }
 }
 @media (min-width: 391px) and (max-width: 768px) {
   /* Estilos para pantallas con ancho máximo de 768px */

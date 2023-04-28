@@ -5,6 +5,7 @@
   right: 0;
   height: 1.1em;
   width: 100%;
+  z-index: 1;
 }
 .p {
   height: 1em;
@@ -28,4 +29,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 391px) {
+  .container {
+    font-size: 0.7em;
+  }
+}
+@media (min-width: 391px) and (max-width: 768px) {
+  /* Estilos para pantallas con ancho máximo de 768px */
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  /* Estilos para pantallas con ancho entre 768px y 992px */
+}
+
+@media (min-width: 992px) {
+  /* Estilos para pantallas con ancho mínimo de 992px */
 }

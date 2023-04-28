@@ -69,8 +69,11 @@ const Form = ({ login }) => {
           </button>
         </div>
         <div className={style.bottomText}>
-          <p>¿Aún no tienes una cuenta?</p>
-          <NavLink to="/register">Regístrate</NavLink>
+          <p>Enter the multiverse by creating an account</p>
+          <NavLink className={style.link} to="/register">
+            {" "}
+            Join the Multiverse
+          </NavLink>
         </div>
       </form>
     </div>

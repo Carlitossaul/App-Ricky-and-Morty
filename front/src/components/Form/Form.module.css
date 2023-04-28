@@ -11,10 +11,10 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  gap: 3rem;
+  gap: 3em;
   background-color: #ddd;
-  height: 30rem;
-  width: 30rem;
+  height: 33em;
+  width: 30em;
   border-radius: 9px;
   border: 1px solid rgba(221, 221, 221, 0.87);
   opacity: 0.98;
@@ -24,14 +24,14 @@
 .username {
   display: flex;
   flex-direction: column;
-  gap: 0.7rem;
+  gap: 0.7em;
   width: 80%;
 }
 
 .password {
   display: flex;
   flex-direction: column;
-  gap: 0.7rem;
+  gap: 0.7em;
   width: 80%;
 }
 
@@ -78,19 +78,17 @@
   border-radius: 8px;
   padding: 9px 20px;
   outline: none;
-  font-size: 14pt;
+  font-size: 14px;
   transition: background-color 0.2s, border 0.2s, box-shadow 0.2s;
 }
 
 .input:hover {
   background-color: white;
-  /* border: solid 1px #f3f3f4; */
   box-shadow: 0px 0px 4px #8b8b8b;
 }
 
 .input:focus {
   background-color: white;
-  /* border: solid 1px #f3f3f4; */
   box-shadow: 0px 0px 4px #8b8b8b;
 }
 
@@ -104,8 +102,8 @@
 
 .span {
   color: red;
-  font-size: 0.8rem;
-  font-weight: 700;
+  font-size: 1em;
+  font-weight: 600;
 }
 
 .video {
@@ -114,11 +112,25 @@
   width: 100vw;
   /* z-index: -1; */
 }
+.bottomText {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-direction: column;
+}
+.link {
+  text-decoration: none;
+  font-weight: 800;
+}
 
 @media (max-width: 391px) {
   .form {
-    width: 90%;
-    height: 60%;
+    width: 96%;
+    height: 30em;
+  }
+  .login {
+    font-size: 15px;
   }
 
   .container {
