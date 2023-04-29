@@ -1,9 +1,9 @@
 .Cards {
   display: flex;
   align-items: flex-start;
-  justify-content: space-evenly;
+  justify-content: center;
   gap: 1.5em;
   flex-wrap: wrap;
+  height: 100vh;
   width: 100%;
-  margin-top: 0em;
 }
