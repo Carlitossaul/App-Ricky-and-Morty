@@ -29,7 +29,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 app.use(express.json()); //para que funcione mi servidor con formato json
 app.use("/rickandmorty", charRoutes);
 app.use("/rickandmorty/fav", favRoutes);
