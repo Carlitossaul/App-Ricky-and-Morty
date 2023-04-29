@@ -14,6 +14,7 @@ import Footer from "./components/Footer/Footer.jsx";
 import Register from "./components/Register/Register.jsx";
 import axios from "axios";
 axios.defaults.baseURL = "app-ricky-and-morty-production.up.railway.app/";
+// axios.defaults.baseURL = "http://localhost:3001/";
 
 //
 function App() {
