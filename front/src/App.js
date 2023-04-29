@@ -9,15 +9,11 @@ import style from "./App.module.css";
 import { useState, useEffect } from "react";
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  deleteFavorite,
-  getUsers,
-  idUser,
-  validationBack,
-} from "./Redux/actions/index.js";
+import { deleteFavorite, getUsers, idUser } from "./Redux/actions/index.js";
 import Footer from "./components/Footer/Footer.jsx";
-import Welcome from "./components/Welcome/Welcome.jsx";
 import Register from "./components/Register/Register.jsx";
+import axios from "axios";
+axios.defaults.baseURL = "http://localhost:3001/";
 
 //
 function App() {

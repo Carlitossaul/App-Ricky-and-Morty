@@ -14,7 +14,7 @@ export const addFavorite = (idUser, personaje) => {
   return async function (dispatch) {
     try {
       const response = await axios.post(
-        `http://localhost:3001/rickandmorty/fav?idUser=${idUser}`,
+        `/rickandmorty/fav?idUser=${idUser}`,
         personaje
       );
       if (response.data) {
@@ -30,7 +30,7 @@ export const deleteFavorite = (id, idUser) => {
   return async function (dispatch) {
     try {
       const response = await axios.delete(
-        `http://localhost:3001/rickandmorty/fav/${id}?idUser=${idUser}`
+        `/rickandmorty/fav/${id}?idUser=${idUser}`
       );
       if (response.data.success)
         dispatch({ type: DELETE_FAVORITE, payload: id });
@@ -43,9 +43,7 @@ export const deleteFavorite = (id, idUser) => {
 export const getFavorite = (idUser) => {
   return async function (dispatch) {
     try {
-      const response = await axios.get(
-        `http://localhost:3001/rickandmorty/fav?idUser=${idUser}`
-      );
+      const response = await axios.get(`/rickandmorty/fav?idUser=${idUser}`);
 
       dispatch({ type: GET_FAVS, payload: response.data });
     } catch (error) {
@@ -78,7 +76,7 @@ export const idUser = (payload) => {
 // export const validationBack = (email, password) => async (dispatch) => {
 //   try {
 //     const obj = await axios.get(
-//       `http://localhost:3001/rickandmorty/login?email=${email}&password=${password}`
+//       `/rickandmorty/login?email=${email}&password=${password}`
 //     );
 //     if (obj.data.access) {
 //       dispatch({ type: VALIDATION, payload: obj.data.id });
@@ -90,9 +88,7 @@ export const idUser = (payload) => {
 
 export const getUsers = () => async (dispatch) => {
   try {
-    const response = await axios.get(
-      "http://localhost:3001/rickandmorty/login/users"
-    );
+    const response = await axios.get("/rickandmorty/login/users");
     dispatch({
       type: GET_USERS,
       payload: response.data,
@@ -104,7 +100,7 @@ export const getUsers = () => async (dispatch) => {
 
 // return (dispatch) => {
 //   axios
-//     .post(`http://localhost:3001/rickandmorty/fav`, personaje) //porque aca no va el signo pesos?
+//     .post(`/rickandmorty/fav`, personaje) //porque aca no va el signo pesos?
 //     .then((response) => {
 //       dispatch({
 //         type: ADD_FAVORITE,
