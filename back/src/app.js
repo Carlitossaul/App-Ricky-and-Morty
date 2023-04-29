@@ -11,7 +11,7 @@ app.use(bodyParser.json({ limit: "50mb" }));
 
 // Configuración con problema de CORS
 const corsOptions = {
-  origin: "*",
+  origin: "https://multiverse-rym.vercel.app",
   credentials: true, // access-control-allow-credentials: true
   optionSuccessStatus: 200,
 };
