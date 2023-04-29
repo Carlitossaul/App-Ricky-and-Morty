@@ -4,8 +4,8 @@ const { getUsers } = require("../controllers/getUsers.js");
 const { Router } = require("express");
 const loginRoutes = Router();
 
-loginRoutes.post("/", postUser);
 loginRoutes.get("/", login);
 loginRoutes.get("/users", getUsers);
+loginRoutes.post("/", postUser);
 
 module.exports = loginRoutes;
