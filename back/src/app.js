@@ -10,12 +10,12 @@ app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
 app.use(bodyParser.json({ limit: "50mb" }));
 
 // Configuración con problema de CORS
-// const corsOptions = {
-//   origin: "https://multiverse-rym.vercel.app",
-//   // origin: "*",
-//   credentials: true, // access-control-allow-credentials: true
-//   optionSuccessStatus: 200,
-// };
+const corsOptions = {
+  origin: "https://multiverse-rym.vercel.app",
+  // origin: "*",
+  credentials: true, // access-control-allow-credentials: true
+  optionSuccessStatus: 200,
+};
 
 app.use((req, res, next) => {
   //https://youarehungry.vercel.app
