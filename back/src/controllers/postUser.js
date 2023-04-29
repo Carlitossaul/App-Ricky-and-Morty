@@ -2,6 +2,7 @@ const { User } = require("../DB_connection.js");
 
 const postUser = async (req, res) => {
   const { email, password } = req.body;
+  console.log(email, password);
   try {
     if (!email || !password)
       res.status(400).json({ message: "ERROR: Faltan datos." });
