@@ -33,15 +33,15 @@
 
 @media (max-width: 391px) {
   .container {
-    display: none;
-    /* font-size: 10px; */
+    /* display: none; */
+    font-size: 10px;
   }
 }
 @media (min-width: 391px) and (max-width: 768px) {
   /* Estilos para pantallas con ancho máximo de 768px */
   .container {
-    display: none;
-    /* font-size: 15px; */
+    /* display: none; */
+    font-size: 15px;
   }
 }
 

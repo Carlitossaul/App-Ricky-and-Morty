@@ -101,7 +101,8 @@ button:hover {
 
 .name {
   padding: 1.5px;
-  color: white;
+  color: #fff;
+  font-weight: 700;
   font-family: "Source Sans Pro", sans-serif;
   letter-spacing: 1px;
   font-size: 0.6em;
@@ -112,8 +113,8 @@ button:hover {
 .data {
   color: #252525;
   font-size: 14px;
-  padding: 5px;
-  margin: 5px;
+  padding: 5px 0px;
+  margin: 5px 0px;
 }
 
 .text {

@@ -95,7 +95,7 @@
   border: none;
   border-radius: 9px;
   padding: 10px 13px;
-  font-size: 0.9em;
+  font-size: 13px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -124,6 +124,7 @@
   margin: 0px 5px;
   text-align: center;
   height: 1.5em;
+  font-weight: 700;
   margin-bottom: 3px;
   font-family: "Roboto", sans-serif;
 }
