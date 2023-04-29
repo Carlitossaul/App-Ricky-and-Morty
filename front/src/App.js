@@ -13,7 +13,7 @@ import { deleteFavorite, getUsers, idUser } from "./Redux/actions/index.js";
 import Footer from "./components/Footer/Footer.jsx";
 import Register from "./components/Register/Register.jsx";
 import axios from "axios";
-axios.defaults.baseURL = "http://localhost:3001/";
+axios.defaults.baseURL = "app-ricky-and-morty-production.up.railway.app/";
 
 //
 function App() {
@@ -55,7 +55,9 @@ function App() {
   const onSearch = (character) => {
     let search = characters.filter((per) => per.id == character);
     if (search.length === 0) {
-      fetch(`http://localhost:3001/rickandmorty/character/${character}`)
+      fetch(
+        `app-ricky-and-morty-production.up.railway.app/rickandmorty/character/${character}`
+      )
         .then((response) => response.json())
         .then((data) => {
           if (data.name) {
