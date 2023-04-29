@@ -17,7 +17,7 @@ app.use(bodyParser.json({ limit: "50mb" }));
 //   optionSuccessStatus: 200,
 // };
 
-server.use((req, res, next) => {
+app.use((req, res, next) => {
   //https://youarehungry.vercel.app
   res.header(
     "Access-Control-Allow-Origin",
