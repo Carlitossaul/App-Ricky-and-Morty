@@ -24,29 +24,25 @@ function getCharacterId(req, res) {
 
 async function getDetailId(req, res) {
   const { detailId } = req.params;
-  const response = await axios.get(
-    `https://rickandmortyapi.com/api/character/${detailId}`
-  );
-  if (detailId) {
-    try {
+  axios
+    .get(`https://rickandmortyapi.com/api/character/${detailId}`)
+    .then(({ data }) => {
       let character = {
-        id: response.data.id,
-        name: response.data.name,
-        image: response.data.image,
-        gender: response.data.gender,
-        species: response.data.species,
-        status: response.data.status,
-        origin: response.data.origin.name,
-        location: response.data.location.name,
+        id: data.id,
+        name: data.name,
+        image: data.image,
+        gender: data.gender,
+        species: data.species,
+        status: data.status,
+        origin: data.origin.name,
+        location: data.location.name,
       };
-      res.status(200).json(character);
-    } catch (error) {
+      return res.status(200).json(character);
+    })
+    .catch((error) => {
       res.status(500).send(error.message);
       console.log(error.message);
-    }
-  } else {
-    res.status(500).send("deves proveer un id por parametro");
-  }
+    });
 }
 
 module.exports = {
