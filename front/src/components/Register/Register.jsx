@@ -39,7 +39,10 @@ const Register = () => {
     e.preventDefault();
     if (Object.values(errors).length === 0) {
       axios
-        .post("/rickandmorty/login", user)
+        .post(
+          "app-ricky-and-morty-production.up.railway.app/rickandmorty/login",
+          user
+        )
         .then(() => navigate("/"))
         .catch((error) => console.log(error));
       alert("User created successfully");
