@@ -13,10 +13,9 @@ import { deleteFavorite, getUsers, idUser } from "./Redux/actions/index.js";
 import Footer from "./components/Footer/Footer.jsx";
 import Register from "./components/Register/Register.jsx";
 import axios from "axios";
-// axios.defaults.baseURL = "app-ricky-and-morty-production.up.railway.app/";
-axios.defaults.baseURL = "app-ricky-and-morty-production.up.railway.app/";
+axios.defaults.baseURL =
+  "https://app-ricky-and-morty-production.up.railway.app/";
 
-//
 function App() {
   const [characters, setCharacters] = useState([]);
   const dispatch = useDispatch();
