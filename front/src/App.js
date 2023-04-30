@@ -15,6 +15,7 @@ import Register from "./components/Register/Register.jsx";
 import axios from "axios";
 axios.defaults.baseURL =
   "https://app-ricky-and-morty-production.up.railway.app/";
+// "http://localhost:3001/";
 
 function App() {
   const [characters, setCharacters] = useState([]);
