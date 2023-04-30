@@ -56,7 +56,7 @@ function App() {
     let search = characters.filter((per) => per.id == character);
     if (search.length === 0) {
       fetch(
-        `app-ricky-and-morty-production.up.railway.app/rickandmorty/character/${character}`
+        `https://app-ricky-and-morty-production.up.railway.app/rickandmorty/character/${character}`
       )
         .then((response) => response.json())
         .then((data) => {
