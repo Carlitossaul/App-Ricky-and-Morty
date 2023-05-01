@@ -13,7 +13,7 @@
   justify-content: center;
   gap: 3em;
   background-color: #ddd;
-  height: 33em;
+  height: 35em;
   width: 30em;
   padding-top: 2em;
   border-radius: 9px;
@@ -103,8 +103,11 @@
 
 .span {
   color: red;
-  font-size: 1em;
+  font-size: 13px;
   font-weight: 600;
+  text-align: center;
+  display: inline-block;
+  max-width: 27em;
 }
 
 .video {
@@ -145,6 +148,9 @@
   .input {
     width: 13em;
   }
+  .span {
+    max-width: 15em;
+  }
 }
 @media (min-width: 391px) and (max-width: 768px) {
   /* Estilos para pantallas con ancho máximo de 768px */
@@ -167,6 +173,9 @@
   }
   .input {
     width: 18em;
+  }
+  .span {
+    max-width: 20em;
   }
 }
 

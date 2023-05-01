@@ -77,8 +77,11 @@
 
 .span {
   color: red;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
+  text-align: center;
+  display: inline-block;
+  max-width: 27em;
 }
 
 .register {
@@ -152,6 +155,9 @@
   .register {
     width: 12em;
   }
+  .span {
+    max-width: 15em;
+  }
 }
 @media (min-width: 391px) and (max-width: 768px) {
   /* Estilos para pantallas con ancho máximo de 768px */
@@ -176,6 +182,9 @@
   }
   .register {
     width: 15.5em;
+  }
+  .span {
+    max-width: 20em;
   }
 }
 
