@@ -15,7 +15,7 @@ import Register from "./components/Register/Register.jsx";
 import axios from "axios";
 axios.defaults.baseURL =
   "https://app-ricky-and-morty-production.up.railway.app/";
-// "http://localhost:3001/"
+//   http://localhost:3001/
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -29,16 +29,16 @@ function App() {
 
   const login = (userData) => {
     const { username, password } = userData;
-    axios(`/rickandmorty/login?email=${username}&password=${password}`).then(
-      ({ data }) => {
+    axios(`/rickandmorty/login?email=${username}&password=${password}`)
+      .then(({ data }) => {
         if (data) {
           const { access, id } = data;
           dispatch(user(id));
           access && dispatch(loginUser());
           navigate("/home");
         }
-      }
-    );
+      })
+      .catch((error) => toast.error(error.response.data.message));
   };
 
   const Random = () => {

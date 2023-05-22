@@ -45,7 +45,7 @@ const Register = () => {
           toast.success(data.message);
           setTimeout(() => {
             navigate("/");
-          }, 2500);
+          }, 2000);
           setUser("");
         })
         .catch((error) => toast.error(error.message));
