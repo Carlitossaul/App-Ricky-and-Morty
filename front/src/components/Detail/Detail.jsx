@@ -13,7 +13,7 @@ const Detail = () => {
     axios(`/rickandmorty/detail/${detailId}`)
       .then(({ data }) => {
         console.log(data);
-        if (data) {
+        if (data.data.name) {
           setCharacter(data.data);
         }
       })
