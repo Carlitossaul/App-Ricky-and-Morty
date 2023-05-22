@@ -49,7 +49,7 @@
 
 .onClose {
   align-self: flex-end;
-  margin: 2px;
+  margin: 2px 2px;
   padding: 1px;
   font-size: 1.1em;
   height: 24px;
