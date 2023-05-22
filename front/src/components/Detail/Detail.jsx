@@ -14,7 +14,7 @@ const Detail = () => {
       .then(({ data }) => {
         console.log(data);
         if (data.data.name) {
-          setCharacter(data.data);
+          setCharacter(data);
         }
       })
       .catch((err) => {
