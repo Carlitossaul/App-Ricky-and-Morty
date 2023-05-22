@@ -11,10 +11,10 @@ const Detail = () => {
 
   useEffect(() => {
     axios(`/rickandmorty/detail/${detailId}`)
-      .then((char) => {
+      .then(({ data }) => {
         console.log(char);
         if (char.name) {
-          setCharacter(char);
+          setCharacter(data);
         }
       })
       .catch((err) => {
