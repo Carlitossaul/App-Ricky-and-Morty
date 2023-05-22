@@ -19,8 +19,6 @@ const SearchBar = ({ onSearch }) => {
   return (
     <div className={style.searchbar}>
       <div className={style.container}>
-        {" "}
-        {/* encerrar lo de abajo en un form */}
         <input
           className={style.input}
           type="namber"

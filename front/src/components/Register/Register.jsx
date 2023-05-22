@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import style from "./Register.module.css";
 import validation from "./validation";
 import img2 from "../../assets/87ff0bff883413683816646b97babd45.webp";
+import toast from "react-hot-toast";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -40,12 +41,16 @@ const Register = () => {
     if (Object.values(errors).length === 0) {
       axios
         .post("/rickandmorty/login", user)
-        .then(() => navigate("/"))
-        .catch((error) => console.log(error));
-      alert("User created successfully");
-      navigate("/");
+        .then(({ data }) => {
+          toast.success(data.message);
+          setTimeout(() => {
+            navigate("/");
+          }, 2500);
+          setUser("");
+        })
+        .catch((error) => toast.error(error.message));
     } else {
-      alert("Please complete all fields");
+      toast.error("Please complete all fields");
     }
   };
 

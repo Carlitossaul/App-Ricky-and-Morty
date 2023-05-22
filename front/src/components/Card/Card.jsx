@@ -95,9 +95,6 @@ export const mapDispatchToProps = (dispatch) => {
     deleteFavorite: (id, idUser) => {
       dispatch(deleteFavorite(id, idUser));
     },
-    // getFavorite: (idUser) => {
-    //   dispatch(getFavorite(idUser));
-    // },
   };
 };
 

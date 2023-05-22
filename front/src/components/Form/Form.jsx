@@ -20,7 +20,8 @@ const Form = ({ login }) => {
     );
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     login(userData);
   };
 

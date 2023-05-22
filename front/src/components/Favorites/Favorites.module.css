@@ -6,7 +6,6 @@
   align-items: center;
   flex-direction: column;
   margin: 0px;
-  /* gap: 2em; */
 }
 
 .container {
@@ -168,9 +167,6 @@
 }
 
 @media (max-width: 391px) {
-  .Favorites {
-    /* margin: 0px; */
-  }
   .button {
     position: absolute;
     top: 11em;
@@ -188,8 +184,6 @@
     align-items: center;
     justify-content: center;
     flex-direction: column-reverse;
-  }
-  .botones {
   }
 }
 @media (min-width: 391px) and (max-width: 768px) {

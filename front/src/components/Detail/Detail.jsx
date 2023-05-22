@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import style from "./Detail.module.css";
+import toast from "react-hot-toast";
+import axios from "axios";
 
 const Detail = () => {
   const { detailId } = useParams();
@@ -8,20 +10,15 @@ const Detail = () => {
   const [character, setCharacter] = useState({});
 
   useEffect(() => {
-    fetch(
-      `https://app-ricky-and-morty-production.up.railway.app/rickandmorty/detail/${detailId}`
-    )
-      .then((response) => response.json())
+    axios(`/rickandmorty/detail/${detailId}`)
       .then((char) => {
         console.log(char);
         if (char.name) {
           setCharacter(char);
-        } else {
-          window.alert("No hay personajes con ese ID");
         }
       })
       .catch((err) => {
-        window.alert("No hay personajes con ese ID");
+        toast.error("An error occurred while fetching the data.");
       });
     return setCharacter({});
   }, [detailId]);

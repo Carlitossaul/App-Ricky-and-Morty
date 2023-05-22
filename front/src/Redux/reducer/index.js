@@ -3,17 +3,17 @@ import {
   DELETE_FAVORITE,
   FILTER,
   GET_FAVS,
-  GET_USERS,
   ID_USER,
   ORDER,
-  VALIDATION,
-} from "../actions";
+  LOGIN,
+  LOGOUT,
+} from "../actions/types";
 
 const initialState = {
   myFavorites: [],
   allCharacters: [],
   idUser: null,
-  users: [],
+  login: false,
 };
 
 const rootReducer = (state = initialState, { type, payload }) => {
@@ -65,10 +65,15 @@ const rootReducer = (state = initialState, { type, payload }) => {
         state,
         idUser: payload,
       };
-    case GET_USERS:
+    case LOGIN:
       return {
         ...state,
-        users: payload,
+        login: true,
+      };
+
+    case LOGOUT:
+      return {
+        ...initialState,
       };
     default:
       return { ...state };

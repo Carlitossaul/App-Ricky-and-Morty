@@ -5,19 +5,11 @@
   padding: 0;
 }
 
-/**
-Verde: #00FFAA;
-Amarillo: #F9D71C;
-Rosa: #FF2B6D;
-*/
-/* font-family: "Source Sans Pro", sans-serif; */
-/* font-family: "Ubuntu", sans-serif; */
-/* font-family: "Roboto Mono", monospace; */
-/* font-family: "Roboto", sans-serif; */
+/* Verde: #00FFAA; */
+/* Amarillo: #F9D71C; */
 
 body {
   margin: auto;
-  /* font-family: Arial; */
   font-family: "Roboto", sans-serif;
   background-image: url("../src/assets/bd5b474cdd2b619a9654825b85608c5b74e93071.gif");
   background-size: 100vw 100vh;

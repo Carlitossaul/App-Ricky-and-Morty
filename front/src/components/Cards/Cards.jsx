@@ -1,10 +1,10 @@
 import Card from "../Card/Card";
-import style from "./Cards.module.css";
-import React, { useState, useEffect } from "react";
+import styles from "./Cards.module.css";
+import React from "react";
 
 const Cards = ({ characters, onClose }) => {
-  return (
-    <div className={style.Cards}>
+  return characters.length > 0 ? (
+    <div className={styles.Cards}>
       {characters.map((person, i) => (
         <Card
           key={person.name}
@@ -19,6 +19,16 @@ const Cards = ({ characters, onClose }) => {
           //location={person.location.name}
         />
       ))}
+    </div>
+  ) : (
+    <div className={styles.container}>
+      <div className={styles.welcomeContainer}>
+        <p className={styles.contentWelcome}>
+          Welcome to the Rick & Morty App! You can start by searching for a
+          character in the search engine or press the ADD RANDOM button and it
+          will bring you a random character, have fun!!!
+        </p>
+      </div>
     </div>
   );
 };

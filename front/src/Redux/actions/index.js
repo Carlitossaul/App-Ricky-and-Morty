@@ -1,14 +1,15 @@
 import axios from "axios";
-
-export const ADD_FAVORITE = "ADD_FAVORITE";
-export const DELETE_FAVORITE = "DELETE_FAVORITE";
-export const FILTER = "FILTER";
-export const ORDER = "ORDER";
-export const GET_FAVS = "GET_FAVS";
-export const VALIDATION = "VALIDATION";
-export const ACCESS = "ACCESS";
-export const GET_USERS = "GET_USERS";
-export const ID_USER = "ID_USER";
+import toast from "react-hot-toast";
+import {
+  ADD_FAVORITE,
+  DELETE_FAVORITE,
+  FILTER,
+  ORDER,
+  GET_FAVS,
+  ID_USER,
+  LOGIN,
+  LOGOUT,
+} from "./types";
 
 export const addFavorite = (idUser, personaje) => {
   return async function (dispatch) {
@@ -22,6 +23,7 @@ export const addFavorite = (idUser, personaje) => {
       }
     } catch (error) {
       console.log(error);
+      toast.error(error.message);
     }
   };
 };
@@ -36,6 +38,7 @@ export const deleteFavorite = (id, idUser) => {
         dispatch({ type: DELETE_FAVORITE, payload: id });
     } catch (error) {
       console.log(error);
+      toast.error("An error occurred while deleted favorite.");
     }
   };
 };
@@ -48,6 +51,7 @@ export const getFavorite = (idUser) => {
       dispatch({ type: GET_FAVS, payload: response.data });
     } catch (error) {
       console.log(error);
+      toast.error("An error occurred while retrieving the favorites.");
     }
   };
 };
@@ -66,45 +70,21 @@ export const orderCards = (id) => {
   };
 };
 
-export const idUser = (payload) => {
+export const user = (payload) => {
   return {
     type: ID_USER,
     payload: payload,
   };
 };
 
-// export const validationBack = (email, password) => async (dispatch) => {
-//   try {
-//     const obj = await axios.get(
-//       `/rickandmorty/login?email=${email}&password=${password}`
-//     );
-//     if (obj.data.access) {
-//       dispatch({ type: VALIDATION, payload: obj.data.id });
-//     }
-//   } catch (error) {
-//     Error({ error: error.message });
-//   }
-// };
+export function loginUser() {
+  return {
+    type: LOGIN,
+  };
+}
 
-export const getUsers = () => async (dispatch) => {
-  try {
-    const response = await axios.get("/rickandmorty/login/users");
-    dispatch({
-      type: GET_USERS,
-      payload: response.data,
-    });
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-// return (dispatch) => {
-//   axios
-//     .post(`/rickandmorty/fav`, personaje) //porque aca no va el signo pesos?
-//     .then((response) => {
-//       dispatch({
-//         type: ADD_FAVORITE,
-//         payload: response.data,
-//       });
-//     });
-// };
+export function logout() {
+  return {
+    type: LOGOUT,
+  };
+}
