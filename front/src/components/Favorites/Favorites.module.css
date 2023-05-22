@@ -51,9 +51,8 @@
   align-self: flex-end;
   margin: 2px 2px;
   padding: 1px;
-  /* font-size: 1.1em; */
-  height: 24px;
-  width: 24px;
+  height: 26px;
+  width: 26px;
   border: none;
   background: none;
   cursor: pointer;
