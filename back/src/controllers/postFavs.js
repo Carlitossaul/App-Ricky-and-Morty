@@ -3,9 +3,9 @@ const { Favorite, User } = require("../DB_connection.js");
 
 const postFavs = async (req, res) => {
   const { idUser } = req.query;
-  // console.log(idUser);
+
   const { id, name, species, gender, image } = req.body;
-  // console.log(req.body);
+
   try {
     if (!id || !name || !species || !gender || !image)
       res.status(401).json({ message: "ERROR: Faltan datos." });
@@ -15,8 +15,6 @@ const postFavs = async (req, res) => {
         name,
         species,
         gender,
-        // status,
-        // origin,
         image,
       },
     });

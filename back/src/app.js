@@ -9,16 +9,11 @@ const loginRoutes = require("./routes/loginRouter");
 app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
 app.use(bodyParser.json({ limit: "50mb" }));
 
-// // Configuración con problema de CORS
-// const corsOptions = {
-//   // origin: "https://multiverse-rym.vercel.app",
-//   origin: "*",
-//   credentials: true, // access-control-allow-credentials: true
-//   optionSuccessStatus: 200,
-// };
-
 app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*"); // "https://rym-multiverse.vercel.app"
+  res.header(
+    "Access-Control-Allow-Origin",
+    "https://rym-multiverse.vercel.app"
+  ); // http://localhost:3000
   res.header("Access-Control-Allow-Credentials", "true");
   res.header(
     "Access-Control-Allow-Headers",
@@ -28,8 +23,7 @@ app.use((req, res, next) => {
   next();
 });
 
-// app.use(cors(corsOptions));
-app.use(express.json()); //para que funcione mi servidor con formato json
+app.use(express.json());
 app.use("/rickandmorty", charRoutes);
 app.use("/rickandmorty/fav", favRoutes);
 app.use("/rickandmorty/login", loginRoutes);
