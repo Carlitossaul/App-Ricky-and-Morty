@@ -49,12 +49,13 @@ const rootReducer = (state = initialState, { type, payload }) => {
       };
     case ORDER:
       const orderCopy = [...state.allCharacters];
-      if (payload === "Ascendiente") {
+      if (payload === "Ascendente") {
         orderCopy.sort((a, b) => a.id - b.id);
       }
       if (payload === "Descendente") {
         orderCopy.sort((a, b) => b.id - a.id);
       }
+
       return {
         ...state,
         myFavorites: orderCopy,

@@ -21,7 +21,7 @@ const Favorites = () => {
     dispatch(getFavorite(idUser));
   }, [dispatch]);
 
-  const handeleOrder = (event) => {
+  const handlerOrder = (event) => {
     dispatch(orderCards(event.target.value));
   };
 
@@ -61,7 +61,7 @@ const Favorites = () => {
           </button>
         </div>
         <div className={style.selects}>
-          <select className={style.select} onChange={handeleOrder}>
+          <select className={style.select} onChange={handlerOrder}>
             <option>Order</option>
             <option value="Ascendente">Ascendente</option>
             <option value="Descendente">Descendente</option>
