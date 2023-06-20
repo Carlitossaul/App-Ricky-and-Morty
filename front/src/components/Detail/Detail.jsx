@@ -29,7 +29,7 @@ const Detail = () => {
     <div className={style.detail}>
       {loading ? (
         <div>
-          <img src={img} alt="loading" />
+          <img className={style.loading} src={img} alt="loading" />
         </div>
       ) : (
         <div className={style.container}>

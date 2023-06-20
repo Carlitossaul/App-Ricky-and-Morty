@@ -57,6 +57,9 @@
   color: #333;
   border: none;
 }
+.loading {
+  height: 15em;
+}
 
 @media (max-width: 391px) {
   .container {
